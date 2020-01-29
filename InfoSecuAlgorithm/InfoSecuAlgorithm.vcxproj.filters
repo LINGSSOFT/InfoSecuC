@@ -18,6 +18,9 @@
     <ClCompile Include="InfoSecuAlgorithm.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AlgoFuncFirst.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="InfoSecuAlgorithm.h">

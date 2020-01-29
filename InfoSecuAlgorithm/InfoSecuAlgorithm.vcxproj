@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AlgoFuncFirst.c" />
     <ClCompile Include="InfoSecuAlgorithm.c" />
   </ItemGroup>
   <ItemGroup>
