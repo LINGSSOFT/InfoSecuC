@@ -1,2 +1,2 @@
-#include "AlgoFuncFirst.h"
+#include "AlgoFunction.h"
 

@@ -9,7 +9,7 @@ int getGCD(int nFir, int nSec);
 void Hanoi(int n, char from, char middle, char to);
 
 // 03. 소수 Prime Number
-bool IsPrimeNumber(int n);
+void IsPrimeNumber(int n);
 
 // 04. 마방진 Magic Square
 void InitSquare();
