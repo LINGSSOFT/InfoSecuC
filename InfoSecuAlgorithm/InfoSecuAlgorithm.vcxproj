@@ -149,7 +149,6 @@
   <ItemGroup>
     <ClCompile Include="AlgoFuncFirst.c" />
     <ClCompile Include="InfoSecuAlgorithm.c" />
-    <ClCompile Include="Source.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AlgoFuncFirst.h" />
