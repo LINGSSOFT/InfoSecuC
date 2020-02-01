@@ -1,9 +1,11 @@
-#include <stdio.h>
+#include "InfoSecuAlgorithm.h"
+#include "AlgoFunction.h"
 
 int main()
 {
-	printf("newBranch");
-	printf("Hello Git!!");
+	AlgoUcl();	// 첫번째 함수 호출
+	abc();		// 두번째 함수 호출
+	def();		// 세번째 함수 호출
 
 	return 0;
 }

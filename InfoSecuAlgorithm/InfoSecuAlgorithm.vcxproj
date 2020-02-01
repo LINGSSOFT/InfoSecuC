@@ -149,8 +149,10 @@
   <ItemGroup>
     <ClCompile Include="AlgoFuncFirst.c" />
     <ClCompile Include="InfoSecuAlgorithm.c" />
+    <ClCompile Include="Source.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AlgoFuncFirst.h" />
     <ClInclude Include="InfoSecuAlgorithm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
