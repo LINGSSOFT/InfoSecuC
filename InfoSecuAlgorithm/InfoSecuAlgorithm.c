@@ -27,6 +27,15 @@ int main()
 			printf("---------------------------------\n");
 			printf("result GCD : %d\n", gcd);
 			break;
+		case 2:
+			printf("하노이알고리즘\n");
+			int n = 0;
+			printf("Input board number : ");
+			scanf_s("%d", &n);
+			printf("---------------------------------\n");
+			Hanoi(n, 'A', 'B', 'C');
+			printf("---------------------------------\n");
+			break;
 		default:
 			printf("다시 선택해주세요!\n");
 			break;
