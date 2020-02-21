@@ -36,11 +36,33 @@ int main()
 			Hanoi(n, 'A', 'B', 'C');
 			printf("---------------------------------\n");
 			break;
+		case 3:
+			printf("소수알고리즘\n");
+			int n = 0;
+			printf("Input number : ");
+			scanf_s("%d", &n);
+			printf("---------------------------------\n");
+			if(IsPrimeNumber(n) == true)
+				printf("%d is a prime number.\n");
+			else
+				printf("%d is not prime number.\n");
+			printf("---------------------------------\n");
+			break;
+		case 4:
+			printf("마방진알고리즘\n");
+			int n = 0;
+			printf("SELECT 3,5,7 : ");
+			scanf_s("%d", &n);
+			printf("---------------------------------\n");
+			InitSquare();
+			GetOddSquare(n);
+			ShowSquare(n);
+			printf("---------------------------------\n");
+			break;
 		default:
 			printf("다시 선택해주세요!\n");
 			break;
 		}
-		
 	}
 
 	return 0;
