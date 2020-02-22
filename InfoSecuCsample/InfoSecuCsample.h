@@ -5,9 +5,6 @@
 #include <time.h>
 #include <ctype.h>
 
-#define FALSE 0
-#define TRUE 1
-
 struct bookInfo
 {
 	char title[40];
@@ -16,8 +13,17 @@ struct bookInfo
 	int pages;
 };
 
-//////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
 // Draw Pocker Program
+// 이 프로그램은 Draw Poker를 구현한다. 사용자는 1부터 5사이의 돈을 베팅할 수 있다.
+// 5개의 카드를 받고 어떤 카드를 유지하고 어떤 카드를 버릴것인지를 선택한다.
+// 최종 카드를 분석하여서 가지고 있는 카드에 따라서 돈이 지급된다.
+// 사용자의 현재 잔액이 표시되고 계속할 것인지를 선택할 수 있다.
+
+// 아래 2개의 상수는 가지고 있는 카드가 플러시냐 또는 스트레이트냐를 결정할 때 사용됨
+#define TRUE 1
+#define FALSE 0
+
 void	printGreeting();
 int		getBet();
 char	getSuit(int suit);
