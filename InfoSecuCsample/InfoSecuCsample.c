@@ -53,7 +53,7 @@ int main()
 			printf("카드 #%d: %c%c\n", i + 1, rank, suit);
 		}
 
-		winnings = analyzehand(ranksinHand, suitsinHand);
+		winnings = analyzeHand(ranksinHand, suitsinHand);
 
 		printf("여러분이 이겼습니다:%d\n", bet * winnings);
 
@@ -238,7 +238,7 @@ int analyzeHand(int ranksinHand[], int suitsinHand[])
 	}
 	else if (four)
 	{
-		printf("포커\n\n")
+		printf("포커\n\n");
 		return(10);
 	}
 	else if (three && pairs == 1)
