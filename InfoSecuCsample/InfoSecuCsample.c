@@ -2,16 +2,14 @@
 
 int main()
 {
-	int bet;
+	int bet, i, winnings;
 	int bank = 100;
-	int i;
 	int cardRank[5];
 	int cardSuit[5];
 	int finalRank[5];
 	int finalSuit[5];
 	int ranksinHand[13];
 	int suitsinHand[4];
-	int winnings;
 	time_t t;
 	char suit, rank, stillPlay;
 
@@ -48,8 +46,8 @@ int main()
 
 		for (i = 0; i < 5; i++)
 		{
-			suit = getsuit(finalSuit[i]);
-			rank = getrank(finalRank[i]);
+			suit = getSuit(finalSuit[i]);
+			rank = getRank(finalRank[i]);
 			printf("카드 #%d: %c%c\n", i + 1, rank, suit);
 		}
 
@@ -72,28 +70,27 @@ int main()
 // 인사말과 함께 여러가지 카드 조합에 대한 점수를 알려준다.
 void printGreeting()
 {
-printf("*************************************************************************\n");
-printf("\n\n완전 초보자의 카지노에 오신 것을 환영합니다.\n\n");
-printf("\t드로 포커의 홈입니다.\n\n");
-printf("*************************************************************************\n");
-printf("규칙은 다음과 같습니다:\n");
-printf("100점으로 시작합니다. 한번 베팅은");
-printf("1점에서 5점 사이입니다.\n");
-printf("처음에 5장의 카드를 받습니다.");
-printf("어던 카드를 버릴지 어떤 카드를 유지할지를");
-printf("선택할 수 있습니다.\n");
-printf("\n카드 결합에 대한 점수는 다음과 같습니다. (1점을 베팅한다고");
-printf("가정합니다.):");
-printf("\n페어\t\t\t\t1점");
-printf("\n투 페어 \t\t\t2점");
-printf("\n쓰리 카드\t\t\t3점");
-printf("\n스트레이트\t\t\t4점");
-printf("\n플러시\t\t\t\t5점");
-printf("\n풀 하우스\t\t\t8점");
-printf("\n포커\t\t\t10점");
-printf("\n스트레이트 플러시\t\t\t20점");
-printf("\n\n즐거운 시간 보내세요!!\n\n");
-
+	printf("*************************************************************************\n");
+	printf("\n\n완전 초보자의 카지노에 오신 것을 환영합니다.\n\n");
+	printf("\t드로 포커의 홈입니다.\n\n");
+	printf("*************************************************************************\n");
+	printf("규칙은 다음과 같습니다:\n");
+	printf("100점으로 시작합니다. 한번 베팅은");
+	printf("1점에서 5점 사이입니다.\n");
+	printf("처음에 5장의 카드를 받습니다.");
+	printf("어던 카드를 버릴지 어떤 카드를 유지할지를");
+	printf("선택할 수 있습니다.\n");
+	printf("\n카드 결합에 대한 점수는 다음과 같습니다. (1점을 베팅한다고");
+	printf("가정합니다.):");
+	printf("\n페어\t\t\t\t1점");
+	printf("\n투 페어 \t\t\t2점");
+	printf("\n쓰리 카드\t\t\t3점");
+	printf("\n스트레이트\t\t\t4점");
+	printf("\n플러시\t\t\t\t5점");
+	printf("\n풀 하우스\t\t\t8점");
+	printf("\n포커\t\t\t10점");
+	printf("\n스트레이트 플러시\t\t\t20점");
+	printf("\n\n즐거운 시간 보내세요!!\n\n");
 }
 
 // 첫 번째 5장을 처리하는 함수

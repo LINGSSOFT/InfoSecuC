@@ -5,14 +5,6 @@
 #include <time.h>
 #include <ctype.h>
 
-struct bookInfo
-{
-	char title[40];
-	char author[25];
-	float price;
-	int pages;
-};
-
 ////////////////////////////////////////////////////////////////////
 // Draw Pocker Program
 // 이 프로그램은 Draw Poker를 구현한다. 사용자는 1부터 5사이의 돈을 베팅할 수 있다.
@@ -31,3 +23,13 @@ char	getRank(int rank);
 void	getFirstand(int cardRank[], int cardSuit[]);
 void	getFinalHand(int cardRank[], int cardSuit[], int finalRank[], int finalSuit[], int ranksinHand[], int suitsinHand[]);
 int		analyzeHand(int ranksinHand[], int suitsinHand[]);
+
+////////////////////////////////////////////////////////////////////
+// Book Info 샘플 구조체
+struct bookInfo
+{
+	char title[40];
+	char author[25];
+	float price;
+	int pages;
+};
