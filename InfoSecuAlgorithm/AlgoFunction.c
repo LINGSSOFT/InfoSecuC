@@ -1,5 +1,8 @@
 #include "AlgoFunction.h"
 
+// 04 마방진 글로벌 2차원 배열 변수 선언
+int g_nSquare[MAX_SIZE][MAX_SIZE] = { 0, };
+
 ////////////////////////////////////////////////////////////////////
 // Show Case AlgoFunc 1~13 exit 9999
 void ShowAlgorithm()
@@ -7,7 +10,7 @@ void ShowAlgorithm()
 	printf("Yeah! ~@.@~\n");
 
 	// Plan
-	int nSelect = 0;
+	int nSelect, n = 0;
 	while (TRUE)
 	{
 		printf("실행할 알고리즘을 선택하여주세요\n");
@@ -32,7 +35,6 @@ void ShowAlgorithm()
 			break;
 		case 2:
 			printf("하노이알고리즘\n");
-			int n = 0;
 			printf("Input board number : ");
 			scanf_s("%d", &n);
 			printf("---------------------------------\n");
@@ -41,19 +43,17 @@ void ShowAlgorithm()
 			break;
 		case 3:
 			printf("소수알고리즘\n");
-			int n = 0;
 			printf("Input number : ");
 			scanf_s("%d", &n);
 			printf("---------------------------------\n");
 			if(IsPrimeNumber(n) == TRUE)
-				printf("%d is a prime number.\n");
+				printf("%d is a prime number.\n", n);
 			else
-				printf("%d is not prime number.\n");
+				printf("%d is not prime number.\n", n);
 			printf("---------------------------------\n");
 			break;
 		case 4:
 			printf("마방진알고리즘\n");
-			int n = 0;
 			printf("SELECT 3,5,7 : ");
 			scanf_s("%d", &n);
 			printf("---------------------------------\n");
@@ -145,7 +145,7 @@ void Hanoi(int n, char from, char middle, char to)
 // 1. 1부터 n까지 반복해서 n의 약수인지 확인한다.
 // 2. 만약 새로운 약수를 찾으면 count변수를 +1한다.
 // 3. 모든 확인이 끝난 뒤 약수의 개수가 2이면 소수이고 그렇지 않으면 수수가 아니다.
-bool IsPrimeNumber(int n)
+int IsPrimeNumber(int n)
 {
 	// n을 인자로 받아서 소수인지 아닌지 확인해서 결과 리턴
 	int count = 0;
@@ -228,11 +228,11 @@ void ShowSquare(int n)
 	printf("\n");
 }
 // 4-2 4의 배수 마방진 그림 관계로 생략
-bool IsInBlock(int n, int row, int col)
+int IsInBlock(int n, int row, int col)
 {
 	return 0;
 }
-void InitSquare()
+/*void InitSquare()
 {
 	printf("Test\n");
 }
@@ -244,18 +244,18 @@ void ShowSquare(int n)
 {
 	printf("Test\n");
 }
-
+*/
 ////////////////////////////////////////////////////////////////////
 // 05. 배열 Array
 void ArrayExample()
 {
-	char Array[5],[5];
+	char Array[5][5];
 
 	// 배열 초기화
 	for(int i = 0; i < 5; i++)
 	{
 		for(int j = 0; j < 5; j++)
-			Array[i][j] = '';
+			Array[i][j] = ' ';
 	}
 
 	// 배열 입력

@@ -3,9 +3,7 @@
 
 #define TRUE    1
 #define FALSE   0
-
-#define MAX_SIZE 10                         // 04 마방진 배열의 최대 크기
-int g_nSquare[MAX_SIZE][MAX_SIZE] = {0,};   // 04 마방진 2차원 배열 선언
+#define MAX_SIZE 10		// 04 마방진 배열 사이즈
 
 ////////////////////////////////////////////////////////////////////
 // Show Case AlgoFunc
@@ -41,7 +39,7 @@ void Hanoi(int n, char from, char middle, char to);
 // 약수를 가지지 않을 때의 p"입니다. 이를테면 2,3,5,7,11,13,17,...등을 소수라
 // 부릅니다. 반대로 다른 숫자의 곱으로 이루어진 4(2*2), 6(2*3)...등 소수가 아닌
 // 자연수를 "합성수"라고 합니다. 참고로 1은 소수도 아니고 합성수도 아닙니다.
-bool IsPrimeNumber(int n);
+int IsPrimeNumber(int n);
 
 ////////////////////////////////////////////////////////////////////
 // 04. 마방진 Magic Square
@@ -62,11 +60,11 @@ void InitSquare();
 void GetOddSquare(int n);
 void ShowSquare(int n);
 // 4-2 4의 배수 마방진 그림 관계로 설명 생략 생각해서 채우기
-bool IsInBlock(int n, int row, int col);
-void InitSquare();
+int IsInBlock(int n, int row, int col);
+/*void InitSquare();
 void GetQuaterSquare(int n);
 void ShowSquare(int n);
-
+*/
 ////////////////////////////////////////////////////////////////////
 // 05. 배열 Array
 // 자료구조와 알고리즘
