@@ -18,9 +18,15 @@
     <ClInclude Include="InfoSecuCsample.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DrawPoker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="InfoSecuCsample.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawPoker.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

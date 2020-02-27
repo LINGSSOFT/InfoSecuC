@@ -147,9 +147,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DrawPoker.c" />
     <ClCompile Include="InfoSecuCsample.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DrawPoker.h" />
     <ClInclude Include="InfoSecuCsample.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
