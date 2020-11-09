@@ -14,6 +14,8 @@ int main()
 		printf("---------------------------------\n");
 		scanf_s("%d", &nSelect);
 
+		if (nSelect == 2) return 0;
+
 		switch (nSelect)
 		{
 		case 1:

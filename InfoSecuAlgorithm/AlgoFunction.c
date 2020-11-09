@@ -64,7 +64,7 @@ void ShowAlgorithm()
 			break;
 		default:
 			printf("다시 선택해주세요!\n");
-			break;
+			return;
 		}
 	}
 }
