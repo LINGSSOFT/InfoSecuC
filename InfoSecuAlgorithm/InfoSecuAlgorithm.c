@@ -12,7 +12,10 @@ int main()
 		printf("1. 알고리즘 13종 \n");
 		printf("2. 종료\n");
 		printf("---------------------------------\n");
+		printf("Input number : ");
 		scanf_s("%d", &nSelect);
+
+		if (nSelect == 2) return 0;
 
 		switch (nSelect)
 		{
@@ -22,7 +25,7 @@ int main()
 		case 2:
 			break;
 		default:
-			printf("다시 선택해주세요!\n");
+			printf("다시 선택해주세요!\n\n");
 			break;
 		}
 	}

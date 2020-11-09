@@ -148,10 +148,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AlgoFunction.c" />
+    <ClCompile Include="AlgoFunction\05_ArrayExample.c" />
+    <ClCompile Include="AlgoFunction\01_getGCD.c" />
+    <ClCompile Include="AlgoFunction\02_Hanoi.c" />
+    <ClCompile Include="AlgoFunction\03_IsPrimeNumber.c" />
+    <ClCompile Include="AlgoFunction\04_Square.c" />
     <ClCompile Include="InfoSecuAlgorithm.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AlgoFunction.h" />
+    <ClInclude Include="AlgoFunction\05_ArrayExample.h" />
+    <ClInclude Include="AlgoFunction\01_getGCD.h" />
+    <ClInclude Include="AlgoFunction\02_Hanoi.h" />
+    <ClInclude Include="AlgoFunction\03_IsPrimeNumber.h" />
+    <ClInclude Include="AlgoFunction\04_Square.h" />
     <ClInclude Include="InfoSecuAlgorithm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

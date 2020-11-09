@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\AlgoFunction">
+      <UniqueIdentifier>{2fe59a1d-f079-42be-858d-065ef2296cbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AlgoFunction">
+      <UniqueIdentifier>{d0f49a4d-f6db-4e2e-a601-ad13ba8f82eb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="InfoSecuAlgorithm.c">
@@ -21,6 +27,21 @@
     <ClCompile Include="AlgoFunction.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AlgoFunction\01_getGCD.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\02_Hanoi.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\03_IsPrimeNumber.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\04_Square.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\05_ArrayExample.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="InfoSecuAlgorithm.h">
@@ -28,6 +49,21 @@
     </ClInclude>
     <ClInclude Include="AlgoFunction.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\01_getGCD.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\02_Hanoi.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\03_IsPrimeNumber.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\04_Square.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\05_ArrayExample.h">
+      <Filter>Header Files\AlgoFunction</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
