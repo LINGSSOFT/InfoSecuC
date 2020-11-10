@@ -226,6 +226,9 @@
     <ClInclude Include="AlgoFunction\13_CompressExample.h" />
     <ClInclude Include="InfoSecuAlgorithm.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Summary.md" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

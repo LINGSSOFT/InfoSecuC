@@ -114,4 +114,9 @@
       <Filter>Header Files\AlgoFunction</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Summary.md">
+      <Filter>Header Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>
