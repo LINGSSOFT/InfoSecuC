@@ -82,6 +82,18 @@ void ShowAlgorithm()
 			ShowSquare(n);
 			printf("---------------------------------\n");
 			break;
+		case 5:
+			printf("배열예제\n");
+			arrayBasic();
+			printf("---------------------------------\n\n");
+			printf("행렬 예제 01\n");
+			ArrayExample01();
+			printf("행렬 예제 02\n");
+			ArrayExample02();
+			printf("행렬 예제 03\n");
+			ArrayExample03();
+			printf("---------------------------------\n");
+			break;
 		default:
 			printf("준비중입니다. 1-4에서 다시 선택해주세요!\n");
 			break;

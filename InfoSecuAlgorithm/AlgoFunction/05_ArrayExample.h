@@ -2,9 +2,10 @@
 #define _CRT_OBSOLETE_NO_WARNINGS
 #include <stdio.h>
 
-
 #define TRUE    1
 #define FALSE   0
+#define MAX_SIZE 10
+#define MATRIX_SIZE 5
 
 ////////////////////////////////////////////////////////////////////
 // 05. 배열 Array
@@ -26,6 +27,18 @@
 // 위하여 제공되는 것이 바로 배열이며, 이는 가장 기본적인 자료구조입니다.
 // 프로그래밍에서 배열(Array)은 동일한 성질을 가지고 있는 자료들의 집합을 의미합니다.
 //
+// 배열의 특징
+// 1. 배열은 색인(index)과 값(value)을 가지는 집합이다.
+// 2. 배열은 선언시 크기가 정해져 있어야 한다.
+//
+// 배열의 선언
+// int arrScore[10];	int(자료형) arrScore(배열명)[10](배열의 크기);
+// 
+// 배열값 저장
+// arrScore[0] = 5;		arrScore(배열명)[0](첨자)
+// 
+// ex> 배열 삽입/삭제/찾기 Sample
+//
 // 배열의 장점
 // 일반적으로 데이터란 복수개의 자료가 모여진 집합을 의미하므로 배열은 이러한 여러 개의
 // 데이터를 저장하고 처리하기 위한 가장 기본적인 자료구조로 사용됩니다.흔히 배열은 리스트
@@ -43,4 +56,17 @@
 // *****
 //
 // *****
-void ArrayExample();
+
+// 배열기본 초기화, 추가, 삭제, 찾기
+void arrayBasic();
+void Insert(int nArray[], int nIndex, int nValue);
+void Delete(int nArray[], int nIndex);
+int Find(int nArray[], int nValue);
+void Print(int nArray[]);
+
+// 행렬예제
+void ArrayExample01();
+void ArrayExample02();
+void ArrayExample03();
+void PrintcArray(char cArray[][MATRIX_SIZE]);
+void PrintnArray(int nArray[][MATRIX_SIZE]);
