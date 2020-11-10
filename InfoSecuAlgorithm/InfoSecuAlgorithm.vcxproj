@@ -72,6 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -90,11 +92,36 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderOutputFile>$(SolutionDir)build\$(Configuration)\$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(SolutionDir)build\$(Configuration)\</AssemblerListingLocation>
+      <ObjectFileName>$(SolutionDir)build\$(Configuration)\</ObjectFileName>
+      <ProgramDataBaseFileName>$(SolutionDir)build\$(Configuration)\vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName>$(SolutionDir)build\$(Configuration)\</XMLDocumentationFileName>
+      <BrowseInformationFile>$(SolutionDir)build\$(Configuration)\</BrowseInformationFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(SolutionDir)build\$(TargetName)$(TargetExt)</OutputFile>
+      <ManifestFile>$(SolutionDir)build\$(Configuration)\$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
+      <ProgramDatabaseFile>$(SolutionDir)build\$(Configuration)\$(TargetName).pdb</ProgramDatabaseFile>
+      <ProfileGuidedDatabase>$(SolutionDir)build\$(Configuration)\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
+    <Manifest>
+      <OutputManifestFile>$(SolutionDir)build\$(Configuration)\$(TargetName)$(TargetExt).embed.manifest</OutputManifestFile>
+    </Manifest>
+    <ManifestResourceCompile>
+      <ResourceOutputFileName>$(SolutionDir)build\$(Configuration)\$(TargetName)$(TargetExt).embed.manifest.res</ResourceOutputFileName>
+    </ManifestResourceCompile>
+    <Xdcmake>
+      <OutputFile>$(SolutionDir)build\$(Configuration)\$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <OutputFile>$(SolutionDir)build\$(Configuration)\$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <BuildLog>
+      <Path>$(SolutionDir)build\$(Configuration)\$(MSBuildProjectName).log</Path>
+    </BuildLog>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
