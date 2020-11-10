@@ -80,6 +80,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -147,13 +149,30 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderOutputFile>$(SolutionDir)build\$(Configuration)\$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <ProgramDataBaseFileName>$(SolutionDir)build\$(Configuration)\vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <ObjectFileName>$(SolutionDir)build\$(Configuration)\</ObjectFileName>
+      <BrowseInformationFile>$(SolutionDir)build\$(Configuration)\</BrowseInformationFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(SolutionDir)build\$(TargetName)$(TargetExt)</OutputFile>
+      <ManifestFile>$(SolutionDir)build\$(Configuration)\$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
+      <ProgramDatabaseFile>$(SolutionDir)build\$(Configuration)\$(TargetName).pdb</ProgramDatabaseFile>
+      <ProfileGuidedDatabase>$(SolutionDir)build\$(Configuration)\$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
+    <BuildLog>
+      <Path>$(SolutionDir)build\$(Configuration)\$(MSBuildProjectName).log</Path>
+    </BuildLog>
+    <Xdcmake>
+      <OutputFile>$(SolutionDir)build\$(Configuration)\$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <OutputFile>$(SolutionDir)build\$(Configuration)\$(TargetName).bsc</OutputFile>
+    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -180,6 +199,14 @@
     <ClCompile Include="AlgoFunction\02_Hanoi.c" />
     <ClCompile Include="AlgoFunction\03_IsPrimeNumber.c" />
     <ClCompile Include="AlgoFunction\04_Square.c" />
+    <ClCompile Include="AlgoFunction\06_LinkExample.c" />
+    <ClCompile Include="AlgoFunction\07_StackExample.c" />
+    <ClCompile Include="AlgoFunction\08_QueueExample.c" />
+    <ClCompile Include="AlgoFunction\09_TreeExample.c" />
+    <ClCompile Include="AlgoFunction\10_SortExample.c" />
+    <ClCompile Include="AlgoFunction\11_SearchExample.c" />
+    <ClCompile Include="AlgoFunction\12_CryptExample.c" />
+    <ClCompile Include="AlgoFunction\13_CompressExample.c" />
     <ClCompile Include="InfoSecuAlgorithm.c" />
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +216,14 @@
     <ClInclude Include="AlgoFunction\02_Hanoi.h" />
     <ClInclude Include="AlgoFunction\03_IsPrimeNumber.h" />
     <ClInclude Include="AlgoFunction\04_Square.h" />
+    <ClInclude Include="AlgoFunction\06_LinkExample.h" />
+    <ClInclude Include="AlgoFunction\07_StackExample.h" />
+    <ClInclude Include="AlgoFunction\08_QueueExample.h" />
+    <ClInclude Include="AlgoFunction\09_TreeExample.h" />
+    <ClInclude Include="AlgoFunction\10_SortExample.h" />
+    <ClInclude Include="AlgoFunction\11_SearchExample.h" />
+    <ClInclude Include="AlgoFunction\12_CryptExample.h" />
+    <ClInclude Include="AlgoFunction\13_CompressExample.h" />
     <ClInclude Include="InfoSecuAlgorithm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

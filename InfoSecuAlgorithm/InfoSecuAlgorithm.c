@@ -1,5 +1,4 @@
 #include "InfoSecuAlgorithm.h"
-#include "AlgoFunction.h"
 
 int main()
 {
@@ -9,8 +8,8 @@ int main()
 	{
 		printf("---------------------------------\n");
 		printf("실행할 알고리즘을 선택하여주세요\n");
-		printf("1. 알고리즘 13종 \n");
-		printf("2. 종료\n");
+		printf("01. 알고리즘 13종 \n");
+		printf("02. 종료\n");
 		printf("---------------------------------\n");
 		printf("Input number : ");
 		scanf_s("%d", &nSelect);

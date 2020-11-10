@@ -42,6 +42,30 @@
     <ClCompile Include="AlgoFunction\05_ArrayExample.c">
       <Filter>Source Files\AlgoFunction</Filter>
     </ClCompile>
+    <ClCompile Include="AlgoFunction\06_LinkExample.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\07_StackExample.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\08_QueueExample.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\09_TreeExample.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\10_SortExample.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\11_SearchExample.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\12_CryptExample.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\13_CompressExample.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="InfoSecuAlgorithm.h">
@@ -63,6 +87,30 @@
       <Filter>Header Files\AlgoFunction</Filter>
     </ClInclude>
     <ClInclude Include="AlgoFunction\05_ArrayExample.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\06_LinkExample.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\07_StackExample.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\08_QueueExample.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\09_TreeExample.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\10_SortExample.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\11_SearchExample.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\12_CryptExample.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\13_CompressExample.h">
       <Filter>Header Files\AlgoFunction</Filter>
     </ClInclude>
   </ItemGroup>

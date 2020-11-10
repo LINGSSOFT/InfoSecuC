@@ -4,20 +4,37 @@
 // Show Case AlgoFunc 1~13 exit 9999
 void ShowAlgorithm()
 {
+	printf("\n---------------------------------\n");
 	printf("Yeah! ~@.@~\n");
 
 	// Plan
 	int nSelect, n = 0;
 	while (TRUE)
 	{
+		printf("---------------------------------\n");
 		printf("실행할 알고리즘을 선택하여주세요\n");
+		printf("01. 최대공약수 \n");
+		printf("02. 하노이탑 \n");
+		printf("03. 소수 \n");
+		printf("04. 마방진 \n");
+		printf("05. 배열 \n");
+		printf("06. 링크 샘플 \n");
+		printf("07. 스택 샘플 \n");
+		printf("08. 큐 샘플 \n");
+		printf("09. 트리 샘플 \n");
+		printf("10. 정렬 샘플 \n");
+		printf("11. 찾기 샘플 \n");
+		printf("12. 암호화 샘플 \n");
+		printf("13. 압축 샘플 \n");
+		printf("99. 종료 \n");
+		printf("---------------------------------\n");
 		printf("Input number : ");
 		scanf_s("%d", &nSelect);
 
-		if (nSelect == 9999)
+		if (nSelect == 99)
 		{
 			printf("이전으로 돌아갑니다\n\n");
-			break;
+			return;
 		}
 
 		switch (nSelect)
@@ -65,8 +82,8 @@ void ShowAlgorithm()
 			printf("---------------------------------\n");
 			break;
 		default:
-			printf("다시 선택해주세요!\n");
-			return;
+			printf("준비중입니다. 1-4에서 다시 선택해주세요!\n");
+			break;
 		}
 	}
 }
