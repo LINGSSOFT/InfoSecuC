@@ -3,6 +3,7 @@
 ////////////////////////////////////////////////////////////////////
 // 04. 마방진 Magic Square
 
+int g_nSquare[MAX_SIZE][MAX_SIZE] = { 0, };		// 마방진 글로벌 2차원 배열 변수 선언
 void GetOddSquare(int n)
 {
 	int row = 0;
@@ -26,6 +27,8 @@ void GetOddSquare(int n)
 		if (row < 0)
 			row = n - 1;
 		if (row >= n)
+			row = 0;
+		if (col < 0)
 			col = n - 1;
 		if (col >= n)
 			col = 0;
@@ -48,7 +51,7 @@ void ShowSquare(int n)
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
-			printf("%02d", g_nSquare[i][j]);
+			printf("%02d ", g_nSquare[i][j]);
 		printf("\n");
 	}
 	printf("\n");

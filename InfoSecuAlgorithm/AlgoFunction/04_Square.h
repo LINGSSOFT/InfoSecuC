@@ -4,9 +4,7 @@
 
 #define TRUE    1
 #define FALSE   0
-
 #define MAX_SIZE 10								// 마방진 배열 사이즈
-int g_nSquare[MAX_SIZE][MAX_SIZE] = { 0, };		// 마방진 글로벌 2차원 배열 변수 선언
 
 ////////////////////////////////////////////////////////////////////
 // 04. 마방진 Magic Square
