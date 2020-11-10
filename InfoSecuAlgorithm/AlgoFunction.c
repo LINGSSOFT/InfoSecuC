@@ -78,6 +78,7 @@ void ShowAlgorithm()
 			printf("---------------------------------\n");
 			InitSquare();
 			GetOddSquare(n);
+			// GetQuaterSquare(n);
 			ShowSquare(n);
 			printf("---------------------------------\n");
 			break;
