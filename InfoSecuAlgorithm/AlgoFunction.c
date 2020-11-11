@@ -26,7 +26,7 @@ void ShowAlgorithm()
 		printf("11. 찾기 샘플 \n");
 		printf("12. 암호화 샘플 \n");
 		printf("13. 압축 샘플 \n");
-		printf("99. 종료 \n");
+		printf("99. 이전으로 \n");
 		printf("---------------------------------\n");
 		printf("Input number : ");
 		scanf_s("%d", &nSelect);
@@ -92,6 +92,13 @@ void ShowAlgorithm()
 			ArrayExample02();
 			printf("행렬 예제 03\n");
 			ArrayExample03();
+			printf("---------------------------------\n");
+			break;
+		case 6:
+			printf("링크예제\n");
+			printf("---------------------------------\n\n");
+			printf("다양한 링크\n");
+			LinkedList();
 			printf("---------------------------------\n");
 			break;
 		default:
