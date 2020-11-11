@@ -101,6 +101,13 @@ void ShowAlgorithm()
 			LinkedList();
 			printf("---------------------------------\n");
 			break;
+		case 7:
+			printf("스택예제\n");
+			printf("---------------------------------\n\n");
+			printf("다양한 스택\n");
+			StackSample();
+			printf("---------------------------------\n");
+			break;
 		default:
 			printf("준비중입니다. 1-4에서 다시 선택해주세요!\n");
 			break;
