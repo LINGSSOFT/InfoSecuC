@@ -83,7 +83,7 @@ void ShowAlgorithm()
 			printf("---------------------------------\n");
 			break;
 		case 5:
-			printf("배열예제\n");
+			printf("배열 예제\n");
 			arrayBasic();
 			printf("---------------------------------\n\n");
 			printf("행렬 예제 01\n");
@@ -95,16 +95,23 @@ void ShowAlgorithm()
 			printf("---------------------------------\n");
 			break;
 		case 6:
-			printf("링크예제\n");
+			printf("링크 예제\n");
 			printf("---------------------------------\n\n");
 			printf("다양한 링크\n");
 			LinkedList();
 			printf("---------------------------------\n");
 			break;
 		case 7:
-			printf("스택예제\n");
+			printf("스택 예제\n");
 			printf("---------------------------------\n\n");
 			printf("다양한 스택\n");
+			StackSample();
+			printf("---------------------------------\n");
+			break;
+		case 8:
+			printf("큐 예제\n");
+			printf("---------------------------------\n\n");
+			printf("다양한 큐\n");
 			StackSample();
 			printf("---------------------------------\n");
 			break;
