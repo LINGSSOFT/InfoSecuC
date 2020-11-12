@@ -1,7 +1,7 @@
 #include "08_QueueExample.h"
 
 ////////////////////////////////////////////////////////////////////
-// 08. í Queue
+// 08. Å¥ Queue
 
 void QueueSample()
 {
@@ -13,75 +13,252 @@ void QueueSample()
 	while (TRUE)
 	{
 		printf("---------------------------------\n");
-		printf("ì‹¤í–‰í•  ì•Œê³ ë¦¬ì¦˜ì„ ì„ íƒí•˜ì—¬ì£¼ì„¸ìš”\n");
-		printf("01. ë°°ì—´ì„ ì´ìš©í•œ í \n");
-		printf("02. ì—°ê²°ë¦¬ìŠ¤íŠ¸ë¥¼ ì´ìš©í•œ í \n");
-		printf("99. ì´ì „ìœ¼ë¡œ \n");
+		printf("½ÇÇàÇÒ ¾Ë°í¸®ÁòÀ» ¼±ÅÃÇÏ¿©ÁÖ¼¼¿ä\n");
+		printf("01. ¹è¿­À» ÀÌ¿ëÇÑ Å¥ \n");
+		printf("02. ¿¬°á¸®½ºÆ®¸¦ ÀÌ¿ëÇÑ Å¥ \n");
+		printf("99. ÀÌÀüÀ¸·Î \n");
 		printf("---------------------------------\n");
 		printf("Input number : ");
 		scanf_s("%d", &nSelect);
 
 		if (nSelect == 99)
 		{
-			printf("ì´ì „ìœ¼ë¡œ ëŒì•„ê°‘ë‹ˆë‹¤\n\n");
+			printf("ÀÌÀüÀ¸·Î µ¹¾Æ°©´Ï´Ù\n\n");
 			return;
 		}
 
 		switch (nSelect)
 		{
 		case 1:
-			printf("ë°°ì—´ì„ ì´ìš©í•œ í\n");
+			printf("¹è¿­À» ÀÌ¿ëÇÑ Å¥\n");
+			int nValue = 0;
+			QarrPut(19);
+			QarrPut(28);
+			QarrPut(74);
+			QarrPut(10);
+			QarrPrintQueue();
+			printf("Current data count = %d\n", QarrGetDataCount());
 			printf("\n");
 			printf("---------------------------------\n");
+			QarrGet(&nValue);
+			QarrGet(&nValue);
+			QarrGet(&nValue);
+			QarrGet(&nValue);
+			QarrGet(&nValue);
 			printf("---------------------------------\n");
 			break;
 		case 2:
-			printf("ì—°ê²°ë¦¬ìŠ¤íŠ¸ë¥¼ ì´ìš©í•œ í\n");
+			printf("¿¬°á¸®½ºÆ®¸¦ ÀÌ¿ëÇÑ Å¥\n");
+			nValue = 0;
+			QlinkPut(19);
+			QlinkPut(28);
+			QlinkPut(74);
+			QlinkPut(10);
+			QlinkPrintQueue();
+			printf("Current data count = %d\n", QlinkGetDataCount());
 			printf("\n");
 			printf("---------------------------------\n");
+			QlinkGet(&nValue);
+			QlinkGet(&nValue);
+			QlinkGet(&nValue);
+			QlinkGet(&nValue);
+			QlinkGet(&nValue);
+			QlinkRemoveQueue();
 			printf("\n");
 			printf("---------------------------------\n");
 			break;
 		default:
-			printf("[1,2] ì¤‘ ì„ íƒí•´ì£¼ì„¸ìš”!\n");
+			printf("[1,2] Áß ¼±ÅÃÇØÁÖ¼¼¿ä!\n");
 			break;
 		}
 	}
 }
 
-// Arrayë¥¼ ì´ìš©í•œ í
-int g_nArray[MAX_QUEUE_SIZE] = { 0, };
+// Array¸¦ ÀÌ¿ëÇÑ Å¥
+int g_nqArray[MAX_QUEUE_SIZE] = { 0, };
 int g_nFront = 0;
 int g_nRear = -1;
-bool arrIsEmpty()
+bool QarrIsEmpty()
 {
+	if (g_nFront > g_nRear)
+		return TRUE;
 
+	return FALSE;
 }
 
-bool arrIsFull()
+bool QarrIsFull()
 {
+	if (g_nRear >= MAX_QUEUE_SIZE)
+		return TRUE;
 
+	return FALSE;
 }
 
-bool arrPut(int nValue)
+bool QarrPut(int nValue)
 {
+	if (QarrIsFull() == TRUE)
+	{
+		printf("[error] queue overflow.\n");
+		return FALSE;
+	}
 
+	g_nRear++;
+	g_nqArray[g_nRear] = nValue;
+
+	printf("Push(%d) \n", nValue);
+	return TRUE;
 }
 
-bool arrGet(int* pnValue)
+bool QarrGet(int* pnValue)
 {
+	if (pnValue == NULL)
+	{
+		printf("[error] invalid parameter.\n");
+		return FALSE;
+	}
 
+	if (QarrIsEmpty() == TRUE)
+	{
+		printf("[error] queue underflow.\n");
+		return FALSE;
+	}
+
+	*pnValue = g_nqArray[g_nFront];
+	g_nFront++;
+
+	printf("Pop(%d) \n", *pnValue);
+	return TRUE;
 }
 
-int arrGetDataCount()
+int QarrGetDataCount()
 {
-
+	return (g_nRear - g_nFront + 1);
 }
 
-void arrPrintQueue()
+void QarrPrintQueue()
 {
+	printf("PrintQueue() : ");
 
+	for (int i = g_nFront; i <= g_nRear; i++)
+		printf("%d ", g_nqArray[i]);
+	
+	printf("\n");
 }
 
-// Linkë¥¼ ì´ìš©í•œ í
+// Link¸¦ ÀÌ¿ëÇÑ Å¥
+QNode* g_pqFront = NULL;
+QNode* g_pqRear = NULL;
+int g_nqCount = 0;
+bool QlinkIsFull()
+{
+	if (g_nqCount >= MAX_QUEUE_SIZE)
+		return TRUE;
 
+	return FALSE;
+}
+
+bool QlinkIsEmpty()
+{
+	if (g_nqCount == 0)
+		return TRUE;
+
+	return FALSE;
+}
+
+bool QlinkPut(int nValue)
+{
+	if (QlinkIsFull() == TRUE)
+	{
+		printf("[error] queue overflow\n");
+		return FALSE;
+	}
+
+	QNode* pNode = (QNode*)malloc(sizeof(QNode));
+	if (pNode == NULL)
+	{
+		printf("[error] memory allocation failed.\n");
+		return FALSE;
+	}
+
+	pNode->nValue = nValue;
+	pNode->pNext = NULL;
+
+	if (g_pqRear == NULL)
+	{
+		g_pqRear = pNode;
+		g_pqFront = pNode;
+	}
+	else
+	{
+		g_pqRear->pNext = pNode;
+		g_pqRear = pNode;
+	}
+
+	g_nqCount++;
+
+	printf("Push(%d)\n", nValue);
+
+	return TRUE;
+}
+
+bool QlinkGet(int* pnValue)
+{
+	if (pnValue == NULL)
+	{
+		printf("[error] invalid parameter.\n");
+		return FALSE;
+	}
+
+	if (QlinkIsEmpty() == TRUE)
+	{
+		printf("[error] queue underflow.\n");
+		return FALSE;
+	}
+
+	*pnValue = g_pqFront->nValue;
+
+	QNode* pDelNode = g_pqFront;
+	g_pqFront = g_pqFront->pNext;
+	free(pDelNode);
+
+	g_nqCount--;
+	if (g_nqCount == 0)
+	{
+		g_pqFront = NULL;
+		g_pqRear = NULL;
+	}
+
+	printf("Pop(%d) \n", *pnValue);
+
+	return TRUE;
+}
+
+int QlinkGetDataCount()
+{
+	return g_nqCount;
+}
+
+void QlinkPrintQueue()
+{
+	printf("PrintStack() : ");
+
+	QNode* pNode = g_pqFront;
+	while (pNode != NULL)
+	{
+		printf("%d ", pNode->nValue);
+		pNode = pNode->pNext;
+	}
+	printf("\n");
+}
+
+void QlinkRemoveQueue()
+{
+	QNode* pNode = g_pqFront;
+	while (pNode != NULL)
+	{
+		QNode* pDelNode = pNode;
+		pNode = pNode->pNext;
+
+		free(pDelNode);
+	}
+}

@@ -112,11 +112,11 @@ void ShowAlgorithm()
 			printf("큐 예제\n");
 			printf("---------------------------------\n\n");
 			printf("다양한 큐\n");
-			StackSample();
+			QueueSample();
 			printf("---------------------------------\n");
 			break;
 		default:
-			printf("준비중입니다. 1-4에서 다시 선택해주세요!\n");
+			printf("준비중입니다. 1-8에서 다시 선택해주세요!\n");
 			break;
 		}
 	}
