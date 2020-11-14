@@ -115,6 +115,13 @@ void ShowAlgorithm()
 			QueueSample();
 			printf("---------------------------------\n");
 			break;
+		case 9:
+			printf("트리 예제\n");
+			printf("---------------------------------\n\n");
+			printf("트리운행\n");
+			TreeBasic();
+			printf("---------------------------------\n");
+			break;
 		default:
 			printf("준비중입니다. 1-8에서 다시 선택해주세요!\n");
 			break;
