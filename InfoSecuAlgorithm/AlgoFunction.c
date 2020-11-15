@@ -122,6 +122,13 @@ void ShowAlgorithm()
 			TreeBasic();
 			printf("---------------------------------\n");
 			break;
+		case 10:
+			printf("정렬 예제\n");
+			printf("---------------------------------\n\n");
+			printf("다양한 정렬\n");
+			SortBasic();
+			printf("---------------------------------\n");
+			break;
 		default:
 			printf("준비중입니다. 1-8에서 다시 선택해주세요!\n");
 			break;
