@@ -19,7 +19,7 @@
 #define TRUE 1
 #define FALSE 0
 
-void	DrawPoker();	// 드로우포커 실행 함수
+void	DrawPoker();		// 드로우포커 실행 함수
 void	printGreeting();
 int		getBet();
 char	getSuit(int suit);
