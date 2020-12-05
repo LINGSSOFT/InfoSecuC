@@ -3,7 +3,7 @@
 
 int main()
 {
-	// Dev Test 
+	// Dev Test
 	int nSelect;
 	printf("//////////////////////\n");
 	printf("// 1. Drawpoker \n");
