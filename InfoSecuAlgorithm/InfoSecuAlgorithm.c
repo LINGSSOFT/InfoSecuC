@@ -1,7 +1,9 @@
 #include "InfoSecuAlgorithm.h"
+#include "./AlgoFunction.h"
 
 int main()
 {
+	// 소스트리 커밋테스트 입니다
 	int nSelect = 0;
 
 	while(TRUE)
