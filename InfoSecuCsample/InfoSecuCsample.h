@@ -11,5 +11,4 @@ struct bookInfo
 	char author[25];
 	float price;
 	int pages;
-	// Test
 };
