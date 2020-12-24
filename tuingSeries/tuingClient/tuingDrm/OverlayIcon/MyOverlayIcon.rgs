@@ -1,0 +1,52 @@
+HKCR
+{
+	OverlayIcon.MyOverlayIcon.1 = s 'MyOverlayIcon Class'
+	{
+		CLSID = s '{81539FE6-33C7-4CE7-90C7-1C7B8F2F2D40}'
+	}
+	OverlayIcon.MyOverlayIcon = s 'MyOverlayIcon Class'
+	{
+		CLSID = s '{81539FE6-33C7-4CE7-90C7-1C7B8F2F2D40}'
+		CurVer = s 'OverlayIcon.MyOverlayIcon.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {81539FE6-33C7-4CE7-90C7-1C7B8F2F2D40} = s 'MyOverlayIcon Class'
+		{
+			ProgID = s 'OverlayIcon.MyOverlayIcon.1'
+			VersionIndependentProgID = s 'OverlayIcon.MyOverlayIcon'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{ADF1FA2A-6EAA-4A97-A55F-3C8B92843EF5}'
+		}
+	}
+}
+
+HKLM
+{
+  NoRemove SOFTWARE
+  {
+    NoRemove Microsoft
+    {
+      NoRemove Windows
+      {
+        NoRemove CurrentVersion
+        {
+          NoRemove Explorer
+          {
+            NoRemove ShellIconOverlayIdentifiers
+            {
+              ForceRemove MyOverlayIcon = s '{81539FE6-33C7-4CE7-90C7-1C7B8F2F2D40}'
+              {
+              }           
+            }
+          }
+        }
+      }
+    }
+  }
+}
