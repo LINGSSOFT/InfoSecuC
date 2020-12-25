@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &133606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 419222}
+  - 114: {fileID: 11410844}
+  - 114: {fileID: 11425432}
+  - 114: {fileID: 11458276}
+  m_Layer: 0
+  m_Name: GameManagerExample
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &419222
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133606}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11410844
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131d63d1cbe312b49aa812af9590206f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shield: {fileID: 0}
+  sparklyFade: {fileID: 0}
+  menuMusic: Music_Example_1
+  musicVolume: 0.4
+  icons:
+  - {fileID: 21300000, guid: d6e8bfd6bcfb81f44b495460cdb1e5ea, type: 3}
+  - {fileID: 21300000, guid: 5e368264ddf027244ac143a18d5ba4f7, type: 3}
+  - {fileID: 21300000, guid: 0d569d3bdc129bc4d8af68b538313a75, type: 3}
+  - {fileID: 21300000, guid: fc0d5d233c0ebc344b03a40a3c053a9f, type: 3}
+  - {fileID: 21300000, guid: ad90b6053e09f3543be83fd9a171658e, type: 3}
+  - {fileID: 21300000, guid: 3a2c41f3b84a364448685cf8b630e18f, type: 3}
+  - {fileID: 21300000, guid: 63f36a40f0130d746bf10cda8c8fb0bf, type: 3}
+  - {fileID: 21300000, guid: 0ab0015586b3d5a48a78bf3799474f99, type: 3}
+  - {fileID: 21300000, guid: 3a3cf8fba24a6c44d9d70cc63eb052b7, type: 3}
+  iconNames:
+  - Navigation System
+  - Scene Loader
+  - UI Button
+  - UI Effect
+  - UI Element
+  - UI Manager
+  - UI Notification
+  - UI Trigger
+  - Playmaker Event Dispatcher
+--- !u!114 &11425432
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d64875b7d7a1344a9c05ab2b4b732b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showHelp: 0
+  triggerOnGameEvent: 1
+  gameEvent: 
+  triggerOnButtonClick: 0
+  buttonName: 
+  dispatchAll: 1
+  onTriggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11410844}
+        m_MethodName: OnGameEvent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: DoozyUI.UITrigger+TriggerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  gameEvents: []
+--- !u!114 &11458276
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d64875b7d7a1344a9c05ab2b4b732b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showHelp: 0
+  triggerOnGameEvent: 0
+  gameEvent: 
+  triggerOnButtonClick: 1
+  buttonName: ~Button Name~
+  dispatchAll: 1
+  onTriggerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11410844}
+        m_MethodName: OnButtonClick
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: DoozyUI.UITrigger+TriggerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  gameEvents: []
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 133606}
+  m_IsPrefabParent: 1
