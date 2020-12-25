@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<ButtonLoopsAnimations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <animationsPresetName>RotateQuick5</animationsPresetName>
+  <moveLoop>
+    <enabled>false</enabled>
+    <autoStart>false</autoStart>
+    <movement>
+      <x>10</x>
+      <y>0</y>
+      <z>0</z>
+    </movement>
+    <easeType>InOutSine</easeType>
+    <loops>-1</loops>
+    <loopType>Yoyo</loopType>
+    <time>0.2</time>
+    <delay>0</delay>
+    <soundAtStartReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtStartReference>
+    <soundAtFinishReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtFinishReference>
+    <soundAtStart />
+    <soundAtFinish />
+  </moveLoop>
+  <rotationLoop>
+    <enabled>true</enabled>
+    <autoStart>false</autoStart>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>5</z>
+    </rotation>
+    <easeType>InOutSine</easeType>
+    <loops>-1</loops>
+    <loopType>Yoyo</loopType>
+    <time>0.25</time>
+    <delay>0</delay>
+    <soundAtStartReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtStartReference>
+    <soundAtFinishReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtFinishReference>
+    <soundAtStart />
+    <soundAtFinish />
+  </rotationLoop>
+  <scaleLoop>
+    <enabled>false</enabled>
+    <autoStart>false</autoStart>
+    <min>
+      <x>1</x>
+      <y>1</y>
+      <z>1</z>
+    </min>
+    <max>
+      <x>1.05</x>
+      <y>1.05</y>
+      <z>1.05</z>
+    </max>
+    <easeType>Linear</easeType>
+    <loops>-1</loops>
+    <loopType>Yoyo</loopType>
+    <time>0.5</time>
+    <delay>0</delay>
+    <soundAtStartReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtStartReference>
+    <soundAtFinishReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtFinishReference>
+    <soundAtStart />
+    <soundAtFinish />
+  </scaleLoop>
+  <fadeLoop>
+    <enabled>false</enabled>
+    <autoStart>false</autoStart>
+    <min>0</min>
+    <max>1</max>
+    <easeType>Linear</easeType>
+    <loops>-1</loops>
+    <loopType>Yoyo</loopType>
+    <time>0.5</time>
+    <delay>0</delay>
+    <soundAtStartReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtStartReference>
+    <soundAtFinishReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtFinishReference>
+    <soundAtStart />
+    <soundAtFinish />
+  </fadeLoop>
+</ButtonLoopsAnimations>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<LoopAnimations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <loopAnimationsPresetName>FastScaleLoop</loopAnimationsPresetName>
+  <moveLoop>
+    <enabled>false</enabled>
+    <autoStart>false</autoStart>
+    <movement>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </movement>
+    <easeType>InOutSine</easeType>
+    <loops>-1</loops>
+    <loopType>Yoyo</loopType>
+    <time>0.5</time>
+    <delay>0</delay>
+    <soundAtStartReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtStartReference>
+    <soundAtFinishReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtFinishReference>
+    <soundAtStart />
+    <soundAtFinish />
+  </moveLoop>
+  <rotationLoop>
+    <enabled>false</enabled>
+    <autoStart>false</autoStart>
+    <rotation>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </rotation>
+    <easeType>InOutSine</easeType>
+    <loops>-1</loops>
+    <loopType>Yoyo</loopType>
+    <time>0.5</time>
+    <delay>0</delay>
+    <soundAtStartReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtStartReference>
+    <soundAtFinishReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtFinishReference>
+    <soundAtStart />
+    <soundAtFinish />
+  </rotationLoop>
+  <scaleLoop>
+    <enabled>true</enabled>
+    <autoStart>false</autoStart>
+    <min>
+      <x>0.9</x>
+      <y>0.9</y>
+      <z>1</z>
+    </min>
+    <max>
+      <x>1.05</x>
+      <y>1.05</y>
+      <z>1</z>
+    </max>
+    <easeType>Linear</easeType>
+    <loops>-1</loops>
+    <loopType>Yoyo</loopType>
+    <time>0.5</time>
+    <delay>0</delay>
+    <soundAtStartReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtStartReference>
+    <soundAtFinishReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtFinishReference>
+    <soundAtStart />
+    <soundAtFinish />
+  </scaleLoop>
+  <fadeLoop>
+    <enabled>false</enabled>
+    <autoStart>false</autoStart>
+    <min>0</min>
+    <max>1</max>
+    <easeType>Linear</easeType>
+    <loops>-1</loops>
+    <loopType>Yoyo</loopType>
+    <time>0.5</time>
+    <delay>0</delay>
+    <soundAtStartReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtStartReference>
+    <soundAtFinishReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtFinishReference>
+    <soundAtStart />
+    <soundAtFinish />
+  </fadeLoop>
+</LoopAnimations>

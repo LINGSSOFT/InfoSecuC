@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<OnClickAnimations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <onClickAnimationsPresetName>ElasticRotateLeft</onClickAnimationsPresetName>
+  <punchPositionEnabled>true</punchPositionEnabled>
+  <punchPositionPunch>
+    <x>0</x>
+    <y>40</y>
+  </punchPositionPunch>
+  <punchPositionSnapping>false</punchPositionSnapping>
+  <punchPositionDuration>0.4</punchPositionDuration>
+  <punchPositionVibrato>12</punchPositionVibrato>
+  <punchPositionElasticity>0.5</punchPositionElasticity>
+  <punchPositionDelay>0</punchPositionDelay>
+  <punchRotationEnabled>true</punchRotationEnabled>
+  <punchRotationPunch>
+    <x>0</x>
+    <y>0</y>
+    <z>30</z>
+  </punchRotationPunch>
+  <punchRotationDuration>0.4</punchRotationDuration>
+  <punchRotationVibrato>12</punchRotationVibrato>
+  <punchRotationElasticity>0.5</punchRotationElasticity>
+  <punchRotationDelay>0</punchRotationDelay>
+  <punchScaleEnabled>false</punchScaleEnabled>
+  <punchScalePunch>
+    <x>0.4</x>
+    <y>0</y>
+    <z>0</z>
+  </punchScalePunch>
+  <punchScaleDuration>0.3</punchScaleDuration>
+  <punchScaleVibrato>4</punchScaleVibrato>
+  <punchScaleElasticity>0.5</punchScaleElasticity>
+  <punchScaleDelay>0.1</punchScaleDelay>
+</OnClickAnimations>
