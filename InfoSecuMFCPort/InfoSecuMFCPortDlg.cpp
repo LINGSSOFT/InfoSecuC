@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 
 // InfoSecuMFCPortDlg.cpp : implementation file
 //
@@ -7,14 +8,47 @@
 #include "InfoSecuMFCPort.h"
 #include "InfoSecuMFCPortDlg.h"
 #include "afxdialogex.h"
+#include "Lib/sqlite3/sqlite3.h"
+
+#pragma comment(lib, "sqlite3.lib")
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
 
-// CAboutDlg dialog used for App About
+// SQLite는 UTF8을 사용하기 때문에 코드 변환이 필요합니다.
+// 출처 - http://dolphin.ivyro.net/file/algorithm/SQLite/tutoria03.html
+int AnsiToUTF8(char* szSrc, char* strDest, int destSize)
+{
+	WCHAR 	szUnicode[255];
+	char 	szUTF8code[255];
 
+	int nUnicodeSize = MultiByteToWideChar(CP_ACP, 0, szSrc, (int)strlen(szSrc), szUnicode, sizeof(szUnicode));
+	int nUTF8codeSize = WideCharToMultiByte(CP_UTF8, 0, szUnicode, nUnicodeSize, szUTF8code, sizeof(szUTF8code), NULL, NULL);
+	assert(destSize > nUTF8codeSize);
+	memcpy(strDest, szUTF8code, nUTF8codeSize);
+	strDest[nUTF8codeSize] = 0;
+	return nUTF8codeSize;
+}
+
+int UTF8ToAnsi(char* szSrc, char* strDest, int destSize)
+{
+	WCHAR 	szUnicode[255];
+	char 	szAnsi[255];
+
+	int nSize = MultiByteToWideChar(CP_UTF8, 0, szSrc, -1, 0, 0);
+	int nUnicodeSize = MultiByteToWideChar(CP_UTF8, 0, szSrc, -1, szUnicode, nSize);
+	int nAnsiSize = WideCharToMultiByte(CP_ACP, 0, szUnicode, nUnicodeSize, szAnsi, sizeof(szAnsi), NULL, NULL);
+	assert(destSize > nAnsiSize);
+	memcpy(strDest, szAnsi, nAnsiSize);
+	strDest[nAnsiSize] = 0;
+	return nAnsiSize;
+}
+
+
+
+// CAboutDlg dialog used for App About
 class CAboutDlg : public CDialogEx
 {
 public:
@@ -47,9 +81,6 @@ END_MESSAGE_MAP()
 
 
 // CInfoSecuMFCPortDlg dialog
-
-
-
 CInfoSecuMFCPortDlg::CInfoSecuMFCPortDlg(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_INFOSECUMFCPORT_DIALOG, pParent)
 {
@@ -59,12 +90,19 @@ CInfoSecuMFCPortDlg::CInfoSecuMFCPortDlg(CWnd* pParent /*=nullptr*/)
 void CInfoSecuMFCPortDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_LIST_VIEW, m_list);
+	DDX_Control(pDX, IDC_EDIT_NAME, m_name);
+	DDX_Control(pDX, IDC_EDIT_TEL, m_tel);
+	DDX_Control(pDX, IDOK, m_add);
+	DDX_Control(pDX, IDCANCEL, m_remove);
 }
 
 BEGIN_MESSAGE_MAP(CInfoSecuMFCPortDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDOK, &CInfoSecuMFCPortDlg::OnBnClickedOk)
+	ON_BN_CLICKED(IDCANCEL, &CInfoSecuMFCPortDlg::OnBnClickedCancel)
 END_MESSAGE_MAP()
 
 
@@ -100,6 +138,73 @@ BOOL CInfoSecuMFCPortDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 
 	// TODO: Add extra initialization here
+	m_list.SetExtendedStyle(LVS_EX_FULLROWSELECT | LVS_EX_GRIDLINES);
+
+	// 리스트 컨트롤에 컬럼 이름 입력
+	m_list.InsertColumn(0, L"이름");
+	m_list.SetColumnWidth(0, 120);
+	m_list.InsertColumn(1, L"전화번호");
+	m_list.SetColumnWidth(1, 240);
+
+	// 데이터베이스 파일 생성 및 열기
+	sqlite3* db;
+	sqlite3_stmt* stmt;
+	char* errmsg = NULL;
+
+	int rc = sqlite3_open("test.db", &db);
+
+	if (rc != SQLITE_OK)
+	{
+		printf("Failed to open DB\n");
+		sqlite3_close(db);
+		exit(1);
+	}
+
+
+	//SQL 테이블 생성
+	char* sql;
+	sql = "CREATE TABLE IF NOT EXISTS DB("
+		"ID INTEGER PRIMARY        KEY     AUTOINCREMENT,"
+		"NAME          TEXT     NOT NULL,"
+		"TEL           TEXT     NOT NULL);";
+
+	rc = sqlite3_exec(db, sql, NULL, NULL, &errmsg);
+
+	if (rc != SQLITE_OK)
+	{
+		printf("create table");
+		sqlite3_free(errmsg);
+		sqlite3_close(db);
+		exit(1);
+	}
+
+
+
+
+	// 테이블을 읽어와 리스트 컨트롤에 보여주기
+	sqlite3_prepare_v2(db, "select * from db", -1, &stmt, NULL);
+
+	while (sqlite3_step(stmt) != SQLITE_DONE)
+	{
+		//int i;
+		int num_cols = sqlite3_column_count(stmt);
+
+
+		char szAnsi[300];
+		UTF8ToAnsi((char*)sqlite3_column_text(stmt, 1), szAnsi, 300);
+		CString name(szAnsi);
+
+		UTF8ToAnsi((char*)sqlite3_column_text(stmt, 2), szAnsi, 300);
+		CString tel(szAnsi);
+
+		int nItem = m_list.InsertItem(0, name);
+		m_list.SetItemText(nItem, 1, tel);
+
+	}
+
+	sqlite3_finalize(stmt);
+
+	sqlite3_close(db);
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
@@ -153,3 +258,130 @@ HCURSOR CInfoSecuMFCPortDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CInfoSecuMFCPortDlg::OnBnClickedOk()
+{
+	// TODO: Add your control notification handler code here
+	// 에디터 박스에 입력된 데이터를 리스트컨트롤에 입력합니다. 
+	CString name;
+	m_name.GetWindowText(name);
+
+	CString tel;
+	m_tel.GetWindowText(tel);
+
+
+	int nItem = m_list.InsertItem(0, name);
+	m_list.SetItemText(nItem, 1, tel);
+
+
+	m_name.SetWindowTextW(L"");
+	m_tel.SetWindowTextW(L"");
+
+
+
+	sqlite3* db;
+	int rc = sqlite3_open("test.db", &db);
+
+	if (rc != SQLITE_OK)
+	{
+		printf("Failed to open DB\n");
+		sqlite3_close(db);
+		exit(1);
+	}
+
+
+
+	char* s_name;
+
+	int sLen = WideCharToMultiByte(CP_ACP, 0, name, -1, NULL, 0, NULL, NULL);
+	s_name = new char[sLen + 1];
+	WideCharToMultiByte(CP_ACP, 0, name, -1, s_name, sLen, NULL, NULL);
+
+	char szName[100];
+	AnsiToUTF8(s_name, szName, 100);
+
+	delete[]s_name;
+
+
+
+
+	char* s_tel;
+
+	sLen = WideCharToMultiByte(CP_ACP, 0, tel, -1, NULL, 0, NULL, NULL);
+	s_tel = new char[sLen + 1];
+	WideCharToMultiByte(CP_ACP, 0, tel, -1, s_tel, sLen, NULL, NULL);
+
+	char szTel[100];
+	AnsiToUTF8(s_tel, szTel, 100);
+
+	delete[]s_tel;
+
+
+
+	char* errmsg = NULL;
+	char sql[255] = { 0 };
+	sprintf(sql, "insert into db(name, tel) values('%s','%s');", szName, szTel);
+
+	if (SQLITE_OK != sqlite3_exec(db, sql, NULL, NULL, &errmsg))
+	{
+		printf("insert");
+	}
+
+	sqlite3_close(db);
+
+
+	//CDialogEx::OnOK();
+}
+
+
+void CInfoSecuMFCPortDlg::OnBnClickedCancel()
+{
+	// TODO: Add your control notification handler code here
+	// 리스트 컨트롤에서 선택한 아이템을 제거합니다.
+	int row = m_list.GetSelectionMark();
+	CString name = m_list.GetItemText(row, 0);
+
+
+	char* s_name;
+
+	int sLen = WideCharToMultiByte(CP_ACP, 0, name, -1, NULL, 0, NULL, NULL);
+	s_name = new char[sLen + 1];
+	WideCharToMultiByte(CP_ACP, 0, name, -1, s_name, sLen, NULL, NULL);
+
+	char szName[100];
+	AnsiToUTF8(s_name, szName, 100);
+
+	delete[]s_name;
+
+
+
+	sqlite3* db;
+	int rc = sqlite3_open("test.db", &db);
+
+	if (rc != SQLITE_OK)
+	{
+		printf("Failed to open DB\n");
+		sqlite3_close(db);
+		exit(1);
+	}
+
+
+	char* errmsg = NULL;
+	char sql[255] = { 0 };
+	sprintf(sql, "delete from db where name = '%s';", szName);
+
+	if (SQLITE_OK != sqlite3_exec(db, sql, NULL, NULL, &errmsg))
+	{
+		printf("delete");
+	}
+
+
+
+	sqlite3_close(db);
+
+
+	m_list.DeleteItem(row);
+
+	//CDialogEx::OnCancel();
+}
