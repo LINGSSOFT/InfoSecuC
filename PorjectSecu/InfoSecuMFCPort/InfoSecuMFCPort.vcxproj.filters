@@ -13,12 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Lib">
-      <UniqueIdentifier>{e911b9ed-2434-42cb-ba71-68463276a48a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Lib\Sqlite3">
-      <UniqueIdentifier>{5b4cb1fb-7cf0-4007-9a8c-baca437b4ec1}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="InfoSecuMFCPort.h">
@@ -39,12 +33,6 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Lib\sqlite3\sqlite3.h">
-      <Filter>Lib\Sqlite3</Filter>
-    </ClInclude>
-    <ClInclude Include="Lib\sqlite3\sqlite3ext.h">
-      <Filter>Lib\Sqlite3</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="InfoSecuMFCPort.cpp">
@@ -55,12 +43,6 @@
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Lib\sqlite3\shell.c">
-      <Filter>Lib\Sqlite3</Filter>
-    </ClCompile>
-    <ClCompile Include="Lib\sqlite3\sqlite3.c">
-      <Filter>Lib\Sqlite3</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
