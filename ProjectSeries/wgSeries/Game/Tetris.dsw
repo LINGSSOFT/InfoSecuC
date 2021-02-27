@@ -1,0 +1,77 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "NetTetris"=".\NetTetris\NetTetris.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "NetTetrisSer"=".\NetTetrisSer\NetTetrisSer.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libSimpleSkin
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Tetris"=".\Tetris\Tetris.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name libSimpleSkin
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name NetTetris
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name NetTetrisSer
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "libSimpleSkin"=".\libSimpleSkin\libSimpleSkin.dsp" - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

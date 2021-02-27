@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<InAnimations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <inAnimationsPresetName>RotateScaleIn</inAnimationsPresetName>
+  <moveIn>
+    <enabled>false</enabled>
+    <moveFrom>LeftScreenEdge</moveFrom>
+    <positionAdjustment>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </positionAdjustment>
+    <positionFrom>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </positionFrom>
+    <easeType>OutExpo</easeType>
+    <time>0.25</time>
+    <delay>0.25</delay>
+    <soundAtStartReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtStartReference>
+    <soundAtFinishReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtFinishReference>
+    <soundAtStart />
+    <soundAtFinish />
+  </moveIn>
+  <rotationIn>
+    <enabled>true</enabled>
+    <rotateFrom>
+      <x>0</x>
+      <y>0</y>
+      <z>90</z>
+    </rotateFrom>
+    <easeType>OutBack</easeType>
+    <time>0.4</time>
+    <delay>0.2</delay>
+    <soundAtStartReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtStartReference>
+    <soundAtFinishReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtFinishReference>
+    <soundAtStart />
+    <soundAtFinish />
+  </rotationIn>
+  <scaleIn>
+    <enabled>true</enabled>
+    <scaleBegin>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </scaleBegin>
+    <easeType>OutBack</easeType>
+    <time>0.4</time>
+    <delay>0.2</delay>
+    <soundAtStartReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtStartReference>
+    <soundAtFinishReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtFinishReference>
+    <soundAtStart />
+    <soundAtFinish />
+  </scaleIn>
+  <fadeIn>
+    <enabled>false</enabled>
+    <easeType>Linear</easeType>
+    <time>0.2</time>
+    <delay>0</delay>
+    <soundAtStartReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtStartReference>
+    <soundAtFinishReference>
+      <soundName>~No Sound~</soundName>
+    </soundAtFinishReference>
+    <soundAtStart />
+    <soundAtFinish />
+  </fadeIn>
+</InAnimations>

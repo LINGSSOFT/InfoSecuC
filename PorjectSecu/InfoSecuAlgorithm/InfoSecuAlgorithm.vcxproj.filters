@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\AlgoFunction">
+      <UniqueIdentifier>{2fe59a1d-f079-42be-858d-065ef2296cbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AlgoFunction">
+      <UniqueIdentifier>{d0f49a4d-f6db-4e2e-a601-ad13ba8f82eb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="InfoSecuAlgorithm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\01_getGCD.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\02_Hanoi.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\03_IsPrimeNumber.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\04_Square.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\05_ArrayExample.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\06_LinkExample.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\07_StackExample.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\08_QueueExample.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\09_TreeExample.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\10_SortExample.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\11_SearchExample.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\12_CryptExample.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+    <ClCompile Include="AlgoFunction\13_CompressExample.c">
+      <Filter>Source Files\AlgoFunction</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="InfoSecuAlgorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\01_getGCD.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\02_Hanoi.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\03_IsPrimeNumber.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\04_Square.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\05_ArrayExample.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\06_LinkExample.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\07_StackExample.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\08_QueueExample.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\09_TreeExample.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\10_SortExample.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\11_SearchExample.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\12_CryptExample.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AlgoFunction\13_CompressExample.h">
+      <Filter>Header Files\AlgoFunction</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Summary.md">
+      <Filter>Header Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>
