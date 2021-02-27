@@ -1,7 +1,18 @@
 #pragma once
 #define _CRT_OBSOLETE_NO_WARNINGS
 #include <stdio.h>
+#include <stdlib.h>
+#include <malloc.h>
 #include <stdbool.h>
+
+#define MAX_DIGIT	3
+#define RADIX_SIZE	10
+
+typedef struct strNode
+{
+	int nKey[MAX_DIGIT];
+	struct strNode* pNext;
+}NODE, *PNODE;
 
 #define TRUE    1
 #define FALSE   0
@@ -142,6 +153,7 @@
 //	19	13	05	27	01	26	31	16	02	09	11	21
 //
 // ~~@..@~~ 쉘정렬은 조금 더 확인이 필요 //////////////////////////////////////////////
+// ~~@..@~~ 쉘정렬은 조금 더 확인이 필요 //////////////////////////////////////////////
 //
 //
 // [v] 퀵 정렬(Quick Sort)이란
@@ -174,13 +186,31 @@
 //
 //
 // [vi] 힙 정렬(Heap Sort)이란
-// 
+// 힙 정렬은 최대 히프 트리나 최소 히프 트리를 만들어서 정렬을 하는 방법입니다. 즉
+// 오름차순 정렬을 위해서는 최대 힙을 구성해야하고, 내림차순 정렬을 위해서는 최소 힙을
+// 구성해야 합니다. 최대 힙을 이용한 정렬 방법이나 최소 힙을 이용한 정렬 방법의 원리는
+// 동일하므로 여기에서는 최대 힙을 통한 오름차순 정렬만 알아보도록 하겠습니다.
+//
+// ~~@..@~~ 힙정렬은 조금 더 확인이 필요 //////////////////////////////////////////////
+// ~~@..@~~ 힙정렬은 조금 더 확인이 필요 //////////////////////////////////////////////
+//
+// [vii] 병합 정렬(Merge Sort)이란
+// [viii] 기수 정렬(Radix Sort)이란
 //
 
 void SelectionSort(int data[], int n);
 void BubbleSort(int data[], int n);
 void InsertionSort(int data[], int n);
 void ShellSort(int data[], int n);
-void PrintArray(int data[], int n);
 void QuickSort(int data[], int n);
-void SortBasic();
+void Reheap(int data[], int i, int n);		// Heap
+void HeapSort(int data[], int n);			// Heap
+void MergeSort(int data1[], int data2[], int m, int n);
+
+PNODE RadixSort(PNODE pNode);				// Radix
+void AddToList(PNODE pHead, PNODE pNode);	// Radix
+void DeleteList(PNODE pNode);				// Radix
+void PrintList(PNODE pNode);				// Radix
+
+void PrintArray(int data[], int n);			// Common Output Function
+void SortBasic();							// Common Main Function
