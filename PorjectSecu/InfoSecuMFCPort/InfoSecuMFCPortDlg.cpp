@@ -8,7 +8,7 @@
 #include "InfoSecuMFCPort.h"
 #include "InfoSecuMFCPortDlg.h"
 #include "afxdialogex.h"
-#include "Lib/sqlite3/sqlite3.h"
+#include "sqlite3.h"
 
 #pragma comment(lib, "sqlite3.lib")
 
