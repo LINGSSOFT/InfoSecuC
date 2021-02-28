@@ -3,7 +3,7 @@
 #include <time.h>
 #include "resource.h"
 
-#include "FSound.h"
+//#include "FSound.h"
 
 #define IDT_BLOCK_DOWN		(100)
 

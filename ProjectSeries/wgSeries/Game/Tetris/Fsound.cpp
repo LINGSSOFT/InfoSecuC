@@ -1,4 +1,7 @@
 #include "StdAfx.h"
+#include "Fsound.h"
+/*
+#include "StdAfx.h"
 #include "FSound.h"
 
 #define NUM_MUSIC_FOR_FSOUND	12
@@ -84,5 +87,5 @@ void FSound::BlockDown(DWORD dwIncrement)
 			sndPlaySound(_T("sound\\blockadd.wav"), SND_ASYNC);
 			break;
 	}
-
 }
+*/

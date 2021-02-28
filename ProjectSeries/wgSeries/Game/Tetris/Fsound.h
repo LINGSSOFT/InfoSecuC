@@ -2,7 +2,7 @@
 
 #include "fmod.hpp"
 #pragma comment (lib,"fmod_vc.lib")
-
+/*
 class FSound
 {
 public:
@@ -15,3 +15,4 @@ public:
 protected:
 
 };
+*/
