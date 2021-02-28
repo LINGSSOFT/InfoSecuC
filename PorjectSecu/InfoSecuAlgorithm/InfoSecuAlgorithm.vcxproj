@@ -72,8 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)build\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)build\ProjectSecu\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\ProjectSecu\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -94,35 +94,38 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeaderOutputFile>$(SolutionDir)build\$(Configuration)\$(TargetName).pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>$(SolutionDir)build\$(Configuration)\</AssemblerListingLocation>
-      <ObjectFileName>$(SolutionDir)build\$(Configuration)\</ObjectFileName>
-      <ProgramDataBaseFileName>$(SolutionDir)build\$(Configuration)\vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
-      <XMLDocumentationFileName>$(SolutionDir)build\$(Configuration)\</XMLDocumentationFileName>
-      <BrowseInformationFile>$(SolutionDir)build\$(Configuration)\</BrowseInformationFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(OutDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName>$(OutDir)</XMLDocumentationFileName>
+      <BrowseInformationFile>$(OutDir)</BrowseInformationFile>
+      <ModuleOutputFile>$(OutDir)</ModuleOutputFile>
+      <ModuleDependenciesFile>$(OutDir)</ModuleDependenciesFile>
+      <SourceDependenciesFile>$(OutDir)</SourceDependenciesFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <OutputFile>$(SolutionDir)build\$(TargetName)$(TargetExt)</OutputFile>
-      <ManifestFile>$(SolutionDir)build\$(Configuration)\$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
-      <ProgramDatabaseFile>$(SolutionDir)build\$(Configuration)\$(TargetName).pdb</ProgramDatabaseFile>
-      <ProfileGuidedDatabase>$(SolutionDir)build\$(Configuration)\$(TargetName).pgd</ProfileGuidedDatabase>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ManifestFile>$(OutDir)$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ProfileGuidedDatabase>$(OutDir)$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <Manifest>
-      <OutputManifestFile>$(SolutionDir)build\$(Configuration)\$(TargetName)$(TargetExt).embed.manifest</OutputManifestFile>
+      <OutputManifestFile>$(OutDir)$(TargetName)$(TargetExt).embed.manifest</OutputManifestFile>
     </Manifest>
     <ManifestResourceCompile>
-      <ResourceOutputFileName>$(SolutionDir)build\$(Configuration)\$(TargetName)$(TargetExt).embed.manifest.res</ResourceOutputFileName>
+      <ResourceOutputFileName>$(OutDir)$(TargetName)$(TargetExt).embed.manifest.res</ResourceOutputFileName>
     </ManifestResourceCompile>
     <Xdcmake>
-      <OutputFile>$(SolutionDir)build\$(Configuration)\$(TargetName).xml</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).xml</OutputFile>
     </Xdcmake>
     <Bscmake>
-      <OutputFile>$(SolutionDir)build\$(Configuration)\$(TargetName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
     </Bscmake>
     <BuildLog>
-      <Path>$(SolutionDir)build\$(Configuration)\$(MSBuildProjectName).log</Path>
+      <Path>$(OutDir)$(MSBuildProjectName).log</Path>
     </BuildLog>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -149,29 +152,34 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <PrecompiledHeaderOutputFile>$(SolutionDir)build\$(Configuration)\$(TargetName).pch</PrecompiledHeaderOutputFile>
-      <ProgramDataBaseFileName>$(SolutionDir)build\$(Configuration)\vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
-      <ObjectFileName>$(SolutionDir)build\$(Configuration)\</ObjectFileName>
-      <BrowseInformationFile>$(SolutionDir)build\$(Configuration)\</BrowseInformationFile>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <ProgramDataBaseFileName>$(OutDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <ObjectFileName>$(OutDir)</ObjectFileName>
+      <BrowseInformationFile>$(OutDir)</BrowseInformationFile>
+      <AssemblerListingLocation>$(OutDir)</AssemblerListingLocation>
+      <ModuleOutputFile>$(OutDir)</ModuleOutputFile>
+      <XMLDocumentationFileName>$(OutDir)</XMLDocumentationFileName>
+      <ModuleDependenciesFile>$(OutDir)</ModuleDependenciesFile>
+      <SourceDependenciesFile>$(OutDir)</SourceDependenciesFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <OutputFile>$(SolutionDir)build\$(TargetName)$(TargetExt)</OutputFile>
-      <ManifestFile>$(SolutionDir)build\$(Configuration)\$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
-      <ProgramDatabaseFile>$(SolutionDir)build\$(Configuration)\$(TargetName).pdb</ProgramDatabaseFile>
-      <ProfileGuidedDatabase>$(SolutionDir)build\$(Configuration)\$(TargetName).pgd</ProfileGuidedDatabase>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ManifestFile>$(OutDir)$(TargetName)$(TargetExt).intermediate.manifest</ManifestFile>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ProfileGuidedDatabase>$(OutDir)$(TargetName).pgd</ProfileGuidedDatabase>
     </Link>
     <BuildLog>
-      <Path>$(SolutionDir)build\$(Configuration)\$(MSBuildProjectName).log</Path>
+      <Path>$(OutDir)$(MSBuildProjectName).log</Path>
     </BuildLog>
     <Xdcmake>
-      <OutputFile>$(SolutionDir)build\$(Configuration)\$(TargetName).xml</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).xml</OutputFile>
     </Xdcmake>
     <Bscmake>
-      <OutputFile>$(SolutionDir)build\$(Configuration)\$(TargetName).bsc</OutputFile>
+      <OutputFile>$(OutDir)$(TargetName).bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
