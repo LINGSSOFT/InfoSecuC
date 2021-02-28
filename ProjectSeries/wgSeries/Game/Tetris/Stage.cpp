@@ -62,7 +62,7 @@ void Stage::OnWMKeyDown(WPARAM wParam, LPARAM lParam)
 {
 	if(wParam == 'N')
 	{
-		FSound::StopBackSound();
+		//FSound::StopBackSound();
 		m_nMusicNum = 0;
 		m_bPaused = FALSE;
 		CSkinStaticControl * pStatic = (CSkinStaticControl *)m_pSkinWindow->FindControl(_T("pause"), NULL);
@@ -118,7 +118,7 @@ void Stage::OnWMKeyDown(WPARAM wParam, LPARAM lParam)
 	{
 		if(wParam == 'R')
 		{
-			FSound::StopBackSound();
+			//FSound::StopBackSound();
 			m_nMusicNum = 0;
 			m_bPaused = FALSE;
 			CSkinStaticControl * pStatic = (CSkinStaticControl *)m_pSkinWindow->FindControl(_T("pause"), NULL);
@@ -265,10 +265,10 @@ void Stage::LineCheck()
 				nStageIncrement++;		// Stage
 				m_nMusicNum++;			// Music
 
-				FSound::StopBackSound();
+				//FSound::StopBackSound();
 				if(m_nMusicNum > 11)
 					m_nMusicNum -= 12;
-				FSound::PlayBackSound(m_nMusicNum);
+				//FSound::PlayBackSound(m_nMusicNum);
 
 				if(m_dwDownTime > SPEED_UP_TIME)
 				{
@@ -280,7 +280,7 @@ void Stage::LineCheck()
 			}
 		}
 	}
-	FSound::BlockDown(dwIncrement);
+//	FSound::BlockDown(dwIncrement);
 	UpdateScore();
 
 	CSkinStaticControl * pStatic;
@@ -359,7 +359,7 @@ void Stage::SetGameOver(BOOL bGameOver)
 //	HMENU hMainMenu = GetMenu(m_pSkinWindow->GetHWND());
 //	HMENU hSubMenu = GetSubMenu(hMainMenu, 0);
 //	EnableMenuItem(hSubMenu, ID_FILE_RETRY, MF_BYCOMMAND | (bGameOver ? MF_ENABLED : MF_GRAYED));
-	FSound::StopBackSound();
+	//FSound::StopBackSound();
 }
 
 void Stage::OnWMCommand(WPARAM wParam, LPARAM lParam)
@@ -393,7 +393,7 @@ void Stage::Restart()
 
 	SetTimer(m_pSkinWindow->GetHWND(), IDT_BLOCK_DOWN, m_dwDownTime, NULL);
 
-	FSound::PlayBackSound(m_nMusicNum);
+	//FSound::PlayBackSound(m_nMusicNum);
 }
 
 void Stage::ClearAll()
@@ -452,12 +452,12 @@ void Stage::TogglePause()
 	if(m_bPaused)
 	{
 		KillTimer(m_pSkinWindow->GetHWND(), IDT_BLOCK_DOWN);
-		FSound::StopBackSound();
+		//FSound::StopBackSound();
 	}
 	else
 	{
 		SetTimer(m_pSkinWindow->GetHWND(), IDT_BLOCK_DOWN, m_dwDownTime, NULL);
-		FSound::PlayBackSound(m_nMusicNum);
+		//FSound::PlayBackSound(m_nMusicNum);
 	}
 	m_pSkinWindow->FindControl(_T("pause"), NULL)->SetVisible(m_bPaused);
 }

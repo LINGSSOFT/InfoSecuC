@@ -1,7 +1,7 @@
 #pragma once
 
 #include "fmod.hpp"
-#pragma comment (lib,"fmodex_vc.lib")
+#pragma comment (lib,"fmod_vc.lib")
 
 class FSound
 {
