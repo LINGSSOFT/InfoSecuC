@@ -3,7 +3,7 @@
   <mode name="default">
   	<window name="stage" width="458" height="493" client_size="y" double_buffering="y"
   		use_default_paint="n" double_click="n">
-  		<image file="SoloBackGround.jpg" left="0" top="0" width="458" height="493" image_rect="0,0:458,493" anchors="lt" draggable="y" />
+  		<image file="BackGround_Single.jpg" left="0" top="0" width="458" height="493" image_rect="0,0:458,493" anchors="lt" draggable="y" />
   		<rectangle name="grid" left="20" top="24" width="220" height="440" anchors="lt" line_color="000000" brush_color="000000" round_width="10" round_height="10"/>
 		<static name="next" left="275" top="125" width="132" height="88" auto_size="n" anchors="lt" face="Comic Sans MS" size="15" color="00ff00" stlye="bold" text="" flags="right"/>
 		<static name="gameover" left="60" top="190" auto_size="y" anchors="lt" face="Comic Sans MS" size="20" color="ffffff" stlye="bold" text="GameOver"/>

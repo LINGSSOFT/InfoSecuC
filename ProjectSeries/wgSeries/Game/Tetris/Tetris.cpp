@@ -11,8 +11,10 @@
 //#define		NUM_ICON_FOR_ANIMATION	1
 #define		MAX_LOADSTRING			100
 #define		MYMSG_NOTIFYICON		(WM_APP + 100)
-#define		STAGE_WIDTH				(458)				//Solo 458, Net 800
-#define		STAGE_HEIGHT			(473)
+#define		STAGE_WIDTH_SINGLE		450		//(458)				//Solo 458, Net 800
+#define		STAGE_HEIGHT_SINGLE		550		//(473)
+#define		STAGE_WIDTH_MULTI		800		//(458)				//Solo 458, Net 800
+#define		STAGE_HEIGHT_MULTI		550		//(473)
 
 // Global Variables:
 HINSTANCE hInst;								// current instance
@@ -59,7 +61,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 		return FALSE;
 	}
 
-	RECT rtWindow = {0, 0, STAGE_WIDTH, STAGE_HEIGHT};
+	RECT rtWindow = {0, 0, STAGE_WIDTH_SINGLE, STAGE_HEIGHT_SINGLE};
 	AdjustWindowRectEx(&rtWindow, GetWindowLong(hMainWnd, GWL_STYLE), TRUE, GetWindowLong(hMainWnd, GWL_EXSTYLE));
 	SetWindowPos(hMainWnd, NULL, 0, 0, rtWindow.right - rtWindow.left, rtWindow.bottom - rtWindow.top, SWP_NOZORDER | SWP_NOMOVE);
 
@@ -69,7 +71,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 	GetModuleFileName(GetModuleHandle(NULL), szSkinFile, MAX_PATH);
 	_tcsrchr(szSkinFile, '\\')[0] = 0;
 	_tcsrchr(szSkinFile, '\\')[0] = 0;
-	_tcscat(szSkinFile, _T("\\DoTetris\\skin\\SoloStage.xml"));
+	_tcscat(szSkinFile, _T("\\DoTetris\\skin\\StageSingle.xml"));
 
 	CSkinFileReader reader;
 	if(!reader.LoadSkin(szSkinFile, _T("default"), hMainWnd))
