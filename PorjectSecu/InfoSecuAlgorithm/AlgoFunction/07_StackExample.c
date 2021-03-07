@@ -1,7 +1,7 @@
 #include "07_StackExample.h"
 
 ////////////////////////////////////////////////////////////////////
-// 07. ½ºÅÃ Stack
+// 07. ìŠ¤íƒ Stack
 
 void StackSample()
 {
@@ -13,24 +13,24 @@ void StackSample()
 	while (TRUE)
 	{
 		printf("---------------------------------\n");
-		printf("½ÇÇàÇÒ ¾Ë°í¸®ÁòÀ» ¼±ÅÃÇÏ¿©ÁÖ¼¼¿ä\n");
-		printf("01. ¹è¿­À» ÀÌ¿ëÇÑ ½ºÅÃ \n");
-		printf("02. ¿¬°á¸®½ºÆ®¸¦ ÀÌ¿ëÇÑ ½ºÅÃ \n");
-		printf("99. ÀÌÀüÀ¸·Î \n");
+		printf("ì‹¤í–‰í•  ì•Œê³ ë¦¬ì¦˜ì„ ì„ íƒí•˜ì—¬ì£¼ì„¸ìš”\n");
+		printf("01. ë°°ì—´ì„ ì´ìš©í•œ ìŠ¤íƒ \n");
+		printf("02. ì—°ê²°ë¦¬ìŠ¤íŠ¸ë¥¼ ì´ìš©í•œ ìŠ¤íƒ \n");
+		printf("99. ì´ì „ìœ¼ë¡œ \n");
 		printf("---------------------------------\n");
 		printf("Input number : ");
 		scanf_s("%d", &nSelect);
 
 		if (nSelect == 99)
 		{
-			printf("ÀÌÀüÀ¸·Î µ¹¾Æ°©´Ï´Ù\n\n");
+			printf("ì´ì „ìœ¼ë¡œ ëŒì•„ê°‘ë‹ˆë‹¤\n\n");
 			return;
 		}
 
 		switch (nSelect)
 		{
 		case 1:
-			printf("¹è¿­À» ÀÌ¿ëÇÑ ½ºÅÃ\n");
+			printf("ë°°ì—´ì„ ì´ìš©í•œ ìŠ¤íƒ\n");
 			int nValue = 0;
 			arrPush(19);
 			arrPush(28);
@@ -49,7 +49,7 @@ void StackSample()
 			printf("---------------------------------\n");
 			break;
 		case 2:
-			printf("¿¬°á¸®½ºÆ®¸¦ ÀÌ¿ëÇÑ ½ºÅÃ\n");
+			printf("ì—°ê²°ë¦¬ìŠ¤íŠ¸ë¥¼ ì´ìš©í•œ ìŠ¤íƒ\n");
 			nValue = 0;
 			linkPush(19);
 			linkPush(28);
@@ -69,13 +69,13 @@ void StackSample()
 			printf("---------------------------------\n");
 			break;
 		default:
-			printf("[1,2] Áß ¼±ÅÃÇØÁÖ¼¼¿ä!\n");
+			printf("[1,2] ì¤‘ ì„ íƒí•´ì£¼ì„¸ìš”!\n");
 			break;
 		}
 	}
 }
 
-// Array¸¦ ÀÌ¿ëÇÑ ½ºÅÃ
+// Arrayë¥¼ ì´ìš©í•œ ìŠ¤íƒ
 int g_nArray[MAX_STACK_SIZE] = { 0, };
 int g_nTop = -1;
 bool arrIsEmpty()
@@ -143,7 +143,7 @@ void arrPrintStack()
 	printf("\n");
 }
 
-// Link¸¦ ÀÌ¿ëÇÑ ½ºÅÃ
+// Linkë¥¼ ì´ìš©í•œ ìŠ¤íƒ
 Node* g_pTop = NULL;
 int g_nCount = 0;
 bool linkIsFull()

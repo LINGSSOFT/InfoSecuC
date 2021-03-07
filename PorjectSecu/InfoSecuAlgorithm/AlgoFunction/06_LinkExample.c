@@ -1,7 +1,7 @@
 #include "06_LinkExample.h"
 
 ////////////////////////////////////////////////////////////////////
-// 06. ¸µÅ© Link
+// 06. ë§í¬ Link
 
 void LinkedList()
 {
@@ -13,24 +13,24 @@ void LinkedList()
 	while (TRUE)
 	{
 		printf("---------------------------------\n");
-		printf("½ÇÇàÇÒ ¾Ë°í¸®ÁòÀ» ¼±ÅÃÇÏ¿©ÁÖ¼¼¿ä\n");
-		printf("01. ´Ü¼ø¿¬°á¸®½ºÆ® \n");
-		printf("02. ´ÙÁß¿¬°á¸®½ºÆ® \n");
-		printf("99. ÀÌÀüÀ¸·Î \n");
+		printf("ì‹¤í–‰í•  ì•Œê³ ë¦¬ì¦˜ì„ ì„ íƒí•˜ì—¬ì£¼ì„¸ìš”\n");
+		printf("01. ë‹¨ìˆœì—°ê²°ë¦¬ìŠ¤íŠ¸ \n");
+		printf("02. ë‹¤ì¤‘ì—°ê²°ë¦¬ìŠ¤íŠ¸ \n");
+		printf("99. ì´ì „ìœ¼ë¡œ \n");
 		printf("---------------------------------\n");
 		printf("Input number : ");
 		scanf_s("%d", &nSelect);
 
 		if (nSelect == 99)
 		{
-			printf("ÀÌÀüÀ¸·Î µ¹¾Æ°©´Ï´Ù\n\n");
+			printf("ì´ì „ìœ¼ë¡œ ëŒì•„ê°‘ë‹ˆë‹¤\n\n");
 			return;
 		}
 
 		switch (nSelect)
 		{
 		case 1:
-			printf("´Ü¼ø¿¬°á¸®½ºÆ®\n");
+			printf("ë‹¨ìˆœì—°ê²°ë¦¬ìŠ¤íŠ¸\n");
 			SingleNode shead, stail;
 			shead.nData = 10;
 			stail.nData = 20;
@@ -39,14 +39,14 @@ void LinkedList()
 			singleTraverseNode(&shead);
 			printf("\n");
 			printf("---------------------------------\n");
-			printf("»ðÀÔ 5, 24, 1978\n");
+			printf("ì‚½ìž… 5, 24, 1978\n");
 			singleInsertNode(&shead, 5);
 			singleInsertNode(&shead, 24);
 			singleInsertNode(&shead, 1978);
 			singleTraverseNode(&shead);
 			printf("\n");
 			printf("---------------------------------\n");
-			printf("»èÁ¦ 2È¸\n");
+			printf("ì‚­ì œ 2íšŒ\n");
 			singleDeleteNode(&shead);
 			singleDeleteNode(&shead);
 			singleTraverseNode(&shead);
@@ -54,7 +54,7 @@ void LinkedList()
 			printf("---------------------------------\n");
 			break;
 		case 2:
-			printf("´ÙÁß¿¬°á¸®½ºÆ®\n");
+			printf("ë‹¤ì¤‘ì—°ê²°ë¦¬ìŠ¤íŠ¸\n");
 			DoubleNode dhead, dtail;
 			dhead.nData = 30;
 			dtail.nData = 40;
@@ -65,7 +65,7 @@ void LinkedList()
 			doubleTraverseNodeForward(&dhead);
 			printf("\n");
 			printf("---------------------------------\n");
-			printf("»ðÀÔ 5, 24, 1978\n");
+			printf("ì‚½ìž… 5, 24, 1978\n");
 			doubleInsertNode(&dhead, 5);
 			doubleInsertNode(&dhead, 24);
 			doubleInsertNode(&dhead, 1978);
@@ -74,7 +74,7 @@ void LinkedList()
 			doubleTraverseNodeReverse(&dtail);
 			printf("\n");
 			printf("---------------------------------\n");
-			printf("»èÁ¦ 2È¸\n");
+			printf("ì‚­ì œ 2íšŒ\n");
 			doubleDeleteNode(dhead.pNext);
 			doubleDeleteNode(dhead.pNext);
 			doubleTraverseNodeForward(&dhead);
@@ -82,7 +82,7 @@ void LinkedList()
 			printf("---------------------------------\n");
 			break;
 		default:
-			printf("ÁØºñÁßÀÔ´Ï´Ù. 1-4¿¡¼­ ´Ù½Ã ¼±ÅÃÇØÁÖ¼¼¿ä!\n");
+			printf("ì¤€ë¹„ì¤‘ìž…ë‹ˆë‹¤. 1-4ì—ì„œ ë‹¤ì‹œ ì„ íƒí•´ì£¼ì„¸ìš”!\n");
 			break;
 		}
 	}
@@ -90,52 +90,52 @@ void LinkedList()
 
 void singleInsertNode(SingleNode* pPrev, int nData)
 {
-	// »õ·Î¿î ³ëµå¸¦ »ý¼º
+	// ìƒˆë¡œìš´ ë…¸ë“œë¥¼ ìƒì„±
 	SingleNode* pNode = NULL;
 	pNode = (SingleNode *)malloc(sizeof(SingleNode));
 	pNode->nData = nData;
 
-	// ÀÌÀü ³ëµåÀÇ ¸µÅ©¸¦ ÀúÀå
+	// ì´ì „ ë…¸ë“œì˜ ë§í¬ë¥¼ ì €ìž¥
 	pNode->pNext = pPrev->pNext;
 
-	// ÀÌÀü ³ëµåÀÇ ¸µÅ©¿¡ »õ·Î¿î ³ëµå ÁÖ¼Ò¸¦ ÀúÀåÇÑ´Ù.
+	// ì´ì „ ë…¸ë“œì˜ ë§í¬ì— ìƒˆë¡œìš´ ë…¸ë“œ ì£¼ì†Œë¥¼ ì €ìž¥í•œë‹¤.
 	pPrev->pNext = pNode;
 }
 
 void singleDeleteNode(SingleNode* pPrev)
 {
-	// »èÁ¦ÇÒ ³ëµå
+	// ì‚­ì œí•  ë…¸ë“œ
 	SingleNode* pDelNode = pPrev->pNext;
 
-	// »èÁ¦ÇÒ ³ëµå ¸µÅ© Á¤º¸¸¦ ÀúÀå
+	// ì‚­ì œí•  ë…¸ë“œ ë§í¬ ì •ë³´ë¥¼ ì €ìž¥
 	pPrev->pNext = pDelNode->pNext;
 
-	// ³ëµå¸¦ »èÁ¦
+	// ë…¸ë“œë¥¼ ì‚­ì œ
 	free(pDelNode);
 }
 
 void singleTraverseNode(SingleNode* pNode)
 {
 	SingleNode* pPointer = pNode;
-	// ³ëµåÀÇ µ¥ÀÌÅÍ¸¦ Ãâ·ÂÇÑ´Ù.
+	// ë…¸ë“œì˜ ë°ì´í„°ë¥¼ ì¶œë ¥í•œë‹¤.
 	printf("%d ", pPointer->nData);
-	// ´ÙÀ½ ³ëµå Á¤º¸°¡ ÀÖÀ¸¸é ¹Ýº¹ÇÑ´Ù. Àç±ÍÈ£Ãâ
+	// ë‹¤ìŒ ë…¸ë“œ ì •ë³´ê°€ ìžˆìœ¼ë©´ ë°˜ë³µí•œë‹¤. ìž¬ê·€í˜¸ì¶œ
 	if (pPointer->pNext != NULL)
 		singleTraverseNode(pPointer->pNext);
 }
 
 void doubleInsertNode(DoubleNode* pTarget, int nData)
 {
-	// »õ·Î¿î ³ëµå¸¦ »ý¼º
+	// ìƒˆë¡œìš´ ë…¸ë“œë¥¼ ìƒì„±
 	DoubleNode* pNode = NULL;
 	pNode = (DoubleNode*)malloc(sizeof(DoubleNode));
 	pNode->nData = nData;
 
-	// »õ·Î¿î ³ëµåÀÇ ¸µÅ©¸¦ ±¸¼º
+	// ìƒˆë¡œìš´ ë…¸ë“œì˜ ë§í¬ë¥¼ êµ¬ì„±
 	pNode->pNext = pTarget->pNext;
 	pNode->pPrev = pTarget;
 
-	// ±âÁ¸ ³ëµåÀÇ ¸µÅ©¿¡ »õ·Î¿î ³ëµå Á¤º¸¸¦ ÀúÀå
+	// ê¸°ì¡´ ë…¸ë“œì˜ ë§í¬ì— ìƒˆë¡œìš´ ë…¸ë“œ ì •ë³´ë¥¼ ì €ìž¥
 	if (pNode->pPrev != NULL)
 		pNode->pPrev->pNext = pNode;
 	if (pNode->pNext != NULL)
@@ -144,15 +144,15 @@ void doubleInsertNode(DoubleNode* pTarget, int nData)
 
 void doubleDeleteNode(DoubleNode* pTarget)
 {
-	// ¾Õ ³ëµåÀÇ ¸µÅ©¸¦ ¼öÁ¤ÇÑ´Ù.
+	// ì•ž ë…¸ë“œì˜ ë§í¬ë¥¼ ìˆ˜ì •í•œë‹¤.
 	if (pTarget->pPrev != NULL)
 		pTarget->pPrev->pNext = pTarget->pNext;
 
-	// µÚ ³ëµåÀÇ ¸µÅ©¸¦ ¼öÁ¤ÇÑ´Ù.
+	// ë’¤ ë…¸ë“œì˜ ë§í¬ë¥¼ ìˆ˜ì •í•œë‹¤.
 	if (pTarget->pNext != NULL)
 		pTarget->pNext->pPrev = pTarget->pPrev;
 
-	// ³ëµå¸¦ »èÁ¦ÇÑ´Ù.
+	// ë…¸ë“œë¥¼ ì‚­ì œí•œë‹¤.
 	free(pTarget);
 }
 
@@ -160,10 +160,10 @@ void doubleTraverseNodeForward(DoubleNode* pNode)
 {
 	DoubleNode* pPointer = pNode;
 
-	// ³ëµåÀÇ µ¥ÀÌÅÍ¸¦ Ãâ·ÂÇÑ´Ù.
+	// ë…¸ë“œì˜ ë°ì´í„°ë¥¼ ì¶œë ¥í•œë‹¤.
 	printf("%d ", pPointer->nData);
 	
-	// ´ÙÀ½ ³ëµå Á¤º¸°¡ ÀÖÀ¸¸é ¹Ýº¹ÇÑ´Ù. Àç±ÍÈ£Ãâ
+	// ë‹¤ìŒ ë…¸ë“œ ì •ë³´ê°€ ìžˆìœ¼ë©´ ë°˜ë³µí•œë‹¤. ìž¬ê·€í˜¸ì¶œ
 	if (pPointer->pNext != NULL)
 		doubleTraverseNodeForward(pPointer->pNext);
 
@@ -173,10 +173,10 @@ void doubleTraverseNodeReverse(DoubleNode* pNode)
 {
 	DoubleNode* pPointer = pNode;
 
-	// ³ëµåÀÇ µ¥ÀÌÅÍ¸¦ Ãâ·ÂÇÑ´Ù.
+	// ë…¸ë“œì˜ ë°ì´í„°ë¥¼ ì¶œë ¥í•œë‹¤.
 	printf("%d ", pPointer->nData);
 
-	// ´ÙÀ½ ³ëµå Á¤º¸°¡ ÀÖÀ¸¸é ¹Ýº¹ÇÑ´Ù. Àç±ÍÈ£Ãâ
+	// ë‹¤ìŒ ë…¸ë“œ ì •ë³´ê°€ ìžˆìœ¼ë©´ ë°˜ë³µí•œë‹¤. ìž¬ê·€í˜¸ì¶œ
 	if (pPointer->pPrev != NULL)
 		doubleTraverseNodeReverse(pPointer->pPrev);
 

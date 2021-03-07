@@ -1,16 +1,16 @@
 #include "02_Hanoi.h"
 
 ////////////////////////////////////////////////////////////////////
-// 02.ÇÏ³ëÀÌÅ¾ Hanoi Tower
+// 02.í•˜ë…¸ì´íƒ‘ Hanoi Tower
 
 void Hanoi(int n, char from, char middle, char to)
 {
-	if (n == 1)											// ¿øÆÇÀÌ 1ÀÏ¶§
+	if (n == 1)											// ì›íŒì´ 1ì¼ë•Œ
 		printf("board #%02d %c -> %c\n", n, from, to);	
 	else
 	{
-		Hanoi(n - 1, from, to, middle);					// 1¹ø±ÔÄ¢
-		printf("board #%02d %c -> %c\n", n, from, to);	// 2¹ø±ÔÄ¢
-		Hanoi(n - 1, middle, from, to);					// 3¹ø±ÔÄ¢
+		Hanoi(n - 1, from, to, middle);					// 1ë²ˆê·œì¹™
+		printf("board #%02d %c -> %c\n", n, from, to);	// 2ë²ˆê·œì¹™
+		Hanoi(n - 1, middle, from, to);					// 3ë²ˆê·œì¹™
 	}
 }

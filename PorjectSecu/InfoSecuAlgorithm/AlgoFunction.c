@@ -25,35 +25,35 @@ void ShowAlgorithm()
 	while (TRUE)
 	{
 		printf("---------------------------------\n");
-		printf("½ÇÇàÇÒ ¾Ë°í¸®ÁòÀ» ¼±ÅÃÇÏ¿©ÁÖ¼¼¿ä\n");
-		printf("01. ÃÖ´ë°ø¾à¼ö \n");
-		printf("02. ÇÏ³ëÀÌÅ¾ \n");
-		printf("03. ¼Ò¼ö \n");
-		printf("04. ¸¶¹æÁø \n");
-		printf("05. ¹è¿­ \n");
-		printf("06. ¸µÅ© »ùÇÃ \n");
-		printf("07. ½ºÅÃ »ùÇÃ \n");
-		printf("08. Å¥ »ùÇÃ \n");
-		printf("09. Æ®¸® »ùÇÃ \n");
-		printf("10. Á¤·Ä »ùÇÃ \n");
-		printf("11. Ã£±â »ùÇÃ \n");
-		printf("12. ¾ÏÈ£È­ »ùÇÃ \n");
-		printf("13. ¾ĞÃà »ùÇÃ \n");
-		printf("99. ÀÌÀüÀ¸·Î \n");
+		printf("ì‹¤í–‰í•  ì•Œê³ ë¦¬ì¦˜ì„ ì„ íƒí•˜ì—¬ì£¼ì„¸ìš”\n");
+		printf("01. ìµœëŒ€ê³µì•½ìˆ˜ \n");
+		printf("02. í•˜ë…¸ì´íƒ‘ \n");
+		printf("03. ì†Œìˆ˜ \n");
+		printf("04. ë§ˆë°©ì§„ \n");
+		printf("05. ë°°ì—´ \n");
+		printf("06. ë§í¬ ìƒ˜í”Œ \n");
+		printf("07. ìŠ¤íƒ ìƒ˜í”Œ \n");
+		printf("08. í ìƒ˜í”Œ \n");
+		printf("09. íŠ¸ë¦¬ ìƒ˜í”Œ \n");
+		printf("10. ì •ë ¬ ìƒ˜í”Œ \n");
+		printf("11. ì°¾ê¸° ìƒ˜í”Œ \n");
+		printf("12. ì•”í˜¸í™” ìƒ˜í”Œ \n");
+		printf("13. ì••ì¶• ìƒ˜í”Œ \n");
+		printf("99. ì´ì „ìœ¼ë¡œ \n");
 		printf("---------------------------------\n");
 		printf("Input number : ");
 		scanf_s("%d", &nSelect);
 
 		if (nSelect == 99)
 		{
-			printf("ÀÌÀüÀ¸·Î µ¹¾Æ°©´Ï´Ù\n\n");
+			printf("ì´ì „ìœ¼ë¡œ ëŒì•„ê°‘ë‹ˆë‹¤\n\n");
 			return;
 		}
 
 		switch (nSelect)
 		{
 		case 1:
-			printf("GCD¾Ë°í¸®Áò\n");
+			printf("GCDì•Œê³ ë¦¬ì¦˜\n");
 			int a = 0, b = 0;
 			int gcd = 0;
 			printf("input a : ");
@@ -66,7 +66,7 @@ void ShowAlgorithm()
 			printf("result GCD : %d\n", gcd);
 			break;
 		case 2:
-			printf("ÇÏ³ëÀÌ¾Ë°í¸®Áò\n");
+			printf("í•˜ë…¸ì´ì•Œê³ ë¦¬ì¦˜\n");
 			printf("Input board number : ");
 			scanf_s("%d", &n);
 			printf("---------------------------------\n");
@@ -74,7 +74,7 @@ void ShowAlgorithm()
 			printf("---------------------------------\n");
 			break;
 		case 3:
-			printf("¼Ò¼ö¾Ë°í¸®Áò\n");
+			printf("ì†Œìˆ˜ì•Œê³ ë¦¬ì¦˜\n");
 			printf("Input number : ");
 			scanf_s("%d", &n);
 			printf("---------------------------------\n");
@@ -85,7 +85,7 @@ void ShowAlgorithm()
 			printf("---------------------------------\n");
 			break;
 		case 4:
-			printf("¸¶¹æÁø¾Ë°í¸®Áò\n");
+			printf("ë§ˆë°©ì§„ì•Œê³ ë¦¬ì¦˜\n");
 			printf("SELECT 3,5,7 : ");
 			scanf_s("%d", &n);
 			printf("---------------------------------\n");
@@ -96,54 +96,54 @@ void ShowAlgorithm()
 			printf("---------------------------------\n");
 			break;
 		case 5:
-			printf("¹è¿­ ¿¹Á¦\n");
+			printf("ë°°ì—´ ì˜ˆì œ\n");
 			arrayBasic();
 			printf("---------------------------------\n\n");
-			printf("Çà·Ä ¿¹Á¦ 01\n");
+			printf("í–‰ë ¬ ì˜ˆì œ 01\n");
 			ArrayExample01();
-			printf("Çà·Ä ¿¹Á¦ 02\n");
+			printf("í–‰ë ¬ ì˜ˆì œ 02\n");
 			ArrayExample02();
-			printf("Çà·Ä ¿¹Á¦ 03\n");
+			printf("í–‰ë ¬ ì˜ˆì œ 03\n");
 			ArrayExample03();
 			printf("---------------------------------\n");
 			break;
 		case 6:
-			printf("¸µÅ© ¿¹Á¦\n");
+			printf("ë§í¬ ì˜ˆì œ\n");
 			printf("---------------------------------\n\n");
-			printf("´Ù¾çÇÑ ¸µÅ©\n");
+			printf("ë‹¤ì–‘í•œ ë§í¬\n");
 			LinkedList();
 			printf("---------------------------------\n");
 			break;
 		case 7:
-			printf("½ºÅÃ ¿¹Á¦\n");
+			printf("ìŠ¤íƒ ì˜ˆì œ\n");
 			printf("---------------------------------\n\n");
-			printf("´Ù¾çÇÑ ½ºÅÃ\n");
+			printf("ë‹¤ì–‘í•œ ìŠ¤íƒ\n");
 			StackSample();
 			printf("---------------------------------\n");
 			break;
 		case 8:
-			printf("Å¥ ¿¹Á¦\n");
+			printf("í ì˜ˆì œ\n");
 			printf("---------------------------------\n\n");
-			printf("´Ù¾çÇÑ Å¥\n");
+			printf("ë‹¤ì–‘í•œ í\n");
 			QueueSample();
 			printf("---------------------------------\n");
 			break;
 		case 9:
-			printf("Æ®¸® ¿¹Á¦\n");
+			printf("íŠ¸ë¦¬ ì˜ˆì œ\n");
 			printf("---------------------------------\n\n");
-			printf("Æ®¸®¿îÇà\n");
+			printf("íŠ¸ë¦¬ìš´í–‰\n");
 			TreeBasic();
 			printf("---------------------------------\n");
 			break;
 		case 10:
-			printf("Á¤·Ä ¿¹Á¦\n");
+			printf("ì •ë ¬ ì˜ˆì œ\n");
 			printf("---------------------------------\n\n");
-			printf("´Ù¾çÇÑ Á¤·Ä\n");
+			printf("ë‹¤ì–‘í•œ ì •ë ¬\n");
 			SortBasic();
 			printf("---------------------------------\n");
 			break;
 		default:
-			printf("ÁØºñÁßÀÔ´Ï´Ù. 1-8¿¡¼­ ´Ù½Ã ¼±ÅÃÇØÁÖ¼¼¿ä!\n");
+			printf("ì¤€ë¹„ì¤‘ì…ë‹ˆë‹¤. 1-8ì—ì„œ ë‹¤ì‹œ ì„ íƒí•´ì£¼ì„¸ìš”!\n");
 			break;
 		}
 	}

@@ -1,7 +1,7 @@
 #include "09_TreeExample.h"
 
 ////////////////////////////////////////////////////////////////////
-// 09. Æ®¸® Tree
+// 09. íŠ¸ë¦¬ Tree
 
 TNode* CreateNode(char cValue)
 {
@@ -14,7 +14,7 @@ TNode* CreateNode(char cValue)
 	pNode->pLeft = NULL;
 	pNode->pRight = NULL;
 
-	printf("%c ³ëµå°¡ »ý¼ºµÇ¾ú½À´Ï´Ù.\n", pNode->cValue);
+	printf("%c ë…¸ë“œê°€ ìƒì„±ë˜ì—ˆìŠµë‹ˆë‹¤.\n", pNode->cValue);
 
 	return pNode;
 }
@@ -28,7 +28,7 @@ void DeleteTree(TNode* pNode)
 		if (pNode->pRight != NULL)
 			DeleteTree(pNode->pRight);
 
-		printf("%c ³ëµå¸¦ »èÁ¦ÇÕ´Ï´Ù.\n", pNode->cValue);
+		printf("%c ë…¸ë“œë¥¼ ì‚­ì œí•©ë‹ˆë‹¤.\n", pNode->cValue);
 		free(pNode);
 	}
 }

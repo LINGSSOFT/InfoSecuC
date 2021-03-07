@@ -11,10 +11,12 @@
 //#define		NUM_ICON_FOR_ANIMATION	1
 #define		MAX_LOADSTRING			100
 #define		MYMSG_NOTIFYICON		(WM_APP + 100)
-#define		STAGE_WIDTH_SINGLE		450		//(458)				//Solo 458, Net 800
+#define		STAGE_WIDTH_SINGLE		480		//(458)				//Solo 458, Net 800
 #define		STAGE_HEIGHT_SINGLE		550		//(473)
 #define		STAGE_WIDTH_MULTI		800		//(458)				//Solo 458, Net 800
 #define		STAGE_HEIGHT_MULTI		550		//(473)
+#define		ADSENCE_WIDTH			480
+#define		ADSENSE_HEIGHT			60
 
 // Global Variables:
 HINSTANCE hInst;								// current instance

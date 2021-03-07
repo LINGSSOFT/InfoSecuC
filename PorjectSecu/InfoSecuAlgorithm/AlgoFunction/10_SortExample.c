@@ -1,7 +1,7 @@
 #include "10_SortExample.h"
 
 ////////////////////////////////////////////////////////////////////
-// 10. Á¤·Ä Sorting
+// 10. ì •ë ¬ Sorting
 
 void SelectionSort(int data[], int n)
 {
@@ -351,7 +351,7 @@ void SortBasic()
 
 }
 
-/* °³¼±Àü ¼¿·º¼Ç/¹öºí ¼ÒÆ® Source
+/* ê°œì„ ì „ ì…€ë ‰ì…˜/ë²„ë¸” ì†ŒíŠ¸ Source
 void SelectionSort(int data[], int n)
 {
 	for (int i = 0; i < n - 1; i++)

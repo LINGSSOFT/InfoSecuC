@@ -1,9 +1,9 @@
 #include "05_ArrayExample.h"
 
 ////////////////////////////////////////////////////////////////////
-// 05. ¹è¿­ Array
+// 05. ë°°ì—´ Array
 
-// ¹è¿­±âº» ÃÊ±âÈ­, Ãß°¡, »èÁ¦, Ã£±â
+// ë°°ì—´ê¸°ë³¸ ì´ˆê¸°í™”, ì¶”ê°€, ì‚­ì œ, ì°¾ê¸°
 void Insert(int nArray[], int nIndex, int nValue)
 {
 	if (nIndex < 0 || nIndex >= MAX_SIZE)
@@ -81,24 +81,24 @@ void arrayBasic()
 
 }
 
-// Çà·Ä ¿¹Á¦
+// í–‰ë ¬ ì˜ˆì œ
 void ArrayExample01()
 {
 	char cArray[MATRIX_SIZE][MATRIX_SIZE];
 
-	// ¹è¿­ ÃÊ±âÈ­
+	// ë°°ì—´ ì´ˆê¸°í™”
 	for (int i = 0; i < MATRIX_SIZE; i++)
 	{
 		for (int j = 0; j < MATRIX_SIZE; j++)
 			cArray[i][j] = ' ';
 	}
 
-	// ¹è¿­ ÀÔ·Â
+	// ë°°ì—´ ìž…ë ¥
 	for (int i = 0; i < MATRIX_SIZE; i = i + 2)
 		for (int j = 0; j < MATRIX_SIZE; j++)
 			cArray[i][j] = '*';
 
-	// ¹è¿­ Ãâ·Â
+	// ë°°ì—´ ì¶œë ¥
 	for (int i = 0; i < MATRIX_SIZE; i++)
 	{
 		for (int j = 0; j < MATRIX_SIZE; j++)
@@ -112,7 +112,7 @@ void ArrayExample02()
 {
 	char cArray[MATRIX_SIZE][MATRIX_SIZE];
 
-	// ¹è¿­ ÃÊ±âÈ­
+	// ë°°ì—´ ì´ˆê¸°í™”
 	for (int i = 0; i < MATRIX_SIZE; i++)
 	{
 		for (int j = 0; j < MATRIX_SIZE; j++)

@@ -1,17 +1,21 @@
 #include "InfoSecuAlgorithm.h"
 #include "./AlgoFunction.h"
 
+#include <windows.h>
+
+#pragma execution_character_set( "utf-8" )
+
 int main()
 {
-	// ¼Ò½ºÆ®¸® Ä¿¹ÔÅ×½ºÆ® ÀÔ´Ï´Ù
+	SetConsoleOutputCP(65001);
 	int nSelect = 0;
 
 	while(TRUE)
 	{
 		printf("---------------------------------\n");
-		printf("½ÇÇàÇÒ ¾Ë°í¸®ÁòÀ» ¼±ÅÃÇÏ¿©ÁÖ¼¼¿ä\n");
-		printf("01. ¾Ë°í¸®Áò 13Á¾ \n");
-		printf("02. Á¾·á\n");
+		printf("ì‹¤í–‰í•  ì•Œê³ ë¦¬ì¦˜ì„ ì„ íƒí•˜ì—¬ì£¼ì„¸ìš”\n");
+		printf("01. ì•Œê³ ë¦¬ì¦˜ 13ì¢… \n");
+		printf("02. ì¢…ë£Œ\n");
 		printf("---------------------------------\n");
 		printf("Input number : ");
 		scanf_s("%d", &nSelect);
@@ -26,7 +30,7 @@ int main()
 		case 2:
 			break;
 		default:
-			printf("´Ù½Ã ¼±ÅÃÇØÁÖ¼¼¿ä!\n\n");
+			printf("ë‹¤ì‹œ ì„ íƒí•´ì£¼ì„¸ìš”!\n\n");
 			break;
 		}
 	}

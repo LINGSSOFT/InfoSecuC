@@ -1,9 +1,9 @@
 #include "04_Square.h"
 
 ////////////////////////////////////////////////////////////////////
-// 04. ¸¶¹æÁø Magic Square
+// 04. ë§ˆë°©ì§„ Magic Square
 
-int g_nSquare[MAX_SIZE][MAX_SIZE] = { 0, };		// ¸¶¹æÁø ±Û·Î¹ú 2Â÷¿ø ¹è¿­ º¯¼ö ¼±¾ğ
+int g_nSquare[MAX_SIZE][MAX_SIZE] = { 0, };		// ë§ˆë°©ì§„ ê¸€ë¡œë²Œ 2ì°¨ì› ë°°ì—´ ë³€ìˆ˜ ì„ ì–¸
 void GetOddSquare(int n)
 {
 	int row = 0;
@@ -58,7 +58,7 @@ void ShowSquare(int n)
 }
 
 
-// 4ÀÇ ¹è¼ö ¸¶¹æÁø
+// 4ì˜ ë°°ìˆ˜ ë§ˆë°©ì§„
 /*
 int IsInBlock(int n, int row, int col)
 {

@@ -1,7 +1,7 @@
 #include "08_QueueExample.h"
 
 ////////////////////////////////////////////////////////////////////
-// 08. Å¥ Queue
+// 08. í Queue
 
 void QueueSample()
 {
@@ -13,24 +13,24 @@ void QueueSample()
 	while (TRUE)
 	{
 		printf("---------------------------------\n");
-		printf("½ÇÇàÇÒ ¾Ë°í¸®ÁòÀ» ¼±ÅÃÇÏ¿©ÁÖ¼¼¿ä\n");
-		printf("01. ¹è¿­À» ÀÌ¿ëÇÑ Å¥ \n");
-		printf("02. ¿¬°á¸®½ºÆ®¸¦ ÀÌ¿ëÇÑ Å¥ \n");
-		printf("99. ÀÌÀüÀ¸·Î \n");
+		printf("ì‹¤í–‰í•  ì•Œê³ ë¦¬ì¦˜ì„ ì„ íƒí•˜ì—¬ì£¼ì„¸ìš”\n");
+		printf("01. ë°°ì—´ì„ ì´ìš©í•œ í \n");
+		printf("02. ì—°ê²°ë¦¬ìŠ¤íŠ¸ë¥¼ ì´ìš©í•œ í \n");
+		printf("99. ì´ì „ìœ¼ë¡œ \n");
 		printf("---------------------------------\n");
 		printf("Input number : ");
 		scanf_s("%d", &nSelect);
 
 		if (nSelect == 99)
 		{
-			printf("ÀÌÀüÀ¸·Î µ¹¾Æ°©´Ï´Ù\n\n");
+			printf("ì´ì „ìœ¼ë¡œ ëŒì•„ê°‘ë‹ˆë‹¤\n\n");
 			return;
 		}
 
 		switch (nSelect)
 		{
 		case 1:
-			printf("¹è¿­À» ÀÌ¿ëÇÑ Å¥\n");
+			printf("ë°°ì—´ì„ ì´ìš©í•œ í\n");
 			int nValue = 0;
 			QarrPut(19);
 			QarrPut(28);
@@ -48,7 +48,7 @@ void QueueSample()
 			printf("---------------------------------\n");
 			break;
 		case 2:
-			printf("¿¬°á¸®½ºÆ®¸¦ ÀÌ¿ëÇÑ Å¥\n");
+			printf("ì—°ê²°ë¦¬ìŠ¤íŠ¸ë¥¼ ì´ìš©í•œ í\n");
 			nValue = 0;
 			QlinkPut(19);
 			QlinkPut(28);
@@ -68,13 +68,13 @@ void QueueSample()
 			printf("---------------------------------\n");
 			break;
 		default:
-			printf("[1,2] Áß ¼±ÅÃÇØÁÖ¼¼¿ä!\n");
+			printf("[1,2] ì¤‘ ì„ íƒí•´ì£¼ì„¸ìš”!\n");
 			break;
 		}
 	}
 }
 
-// Array¸¦ ÀÌ¿ëÇÑ Å¥
+// Arrayë¥¼ ì´ìš©í•œ í
 int g_nqArray[MAX_QUEUE_SIZE] = { 0, };
 int g_nFront = 0;
 int g_nRear = -1;
@@ -145,7 +145,7 @@ void QarrPrintQueue()
 	printf("\n");
 }
 
-// Link¸¦ ÀÌ¿ëÇÑ Å¥
+// Linkë¥¼ ì´ìš©í•œ í
 QNode* g_pqFront = NULL;
 QNode* g_pqRear = NULL;
 int g_nqCount = 0;

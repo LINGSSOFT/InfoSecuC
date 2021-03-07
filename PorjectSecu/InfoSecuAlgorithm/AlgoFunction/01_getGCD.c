@@ -1,7 +1,7 @@
 #include "01_getGCD.h"
 
 ////////////////////////////////////////////////////////////////////
-// 01.ÃÖ´ë°ø¾à¼ö Greatest Common Divisor
+// 01.ìµœëŒ€ê³µì•½ìˆ˜ Greatest Common Divisor
 
 int getGCD(int nFir, int nSec)
 {
