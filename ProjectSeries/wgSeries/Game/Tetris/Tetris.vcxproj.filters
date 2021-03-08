@@ -61,6 +61,12 @@
     <Image Include="Tetris.ico">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="res\DoTet.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\DoTetSm.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Tetris.rc">

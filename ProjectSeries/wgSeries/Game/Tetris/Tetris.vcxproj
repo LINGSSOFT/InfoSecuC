@@ -140,6 +140,8 @@
     <ClInclude Include="Tetris.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="res\DoTet.ico" />
+    <Image Include="res\DoTetSm.ico" />
     <Image Include="small.ico" />
     <Image Include="Tetris.ico" />
   </ItemGroup>

@@ -1,4 +1,4 @@
-//Microsoft Developer Studio generated resource script.
+// Microsoft Visual C++ generated resource script.
 //
 #include "resource.h"
 
@@ -18,31 +18,28 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// Korean resources
+// Korean (Korea) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
-#ifdef _WIN32
 LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
 #pragma code_page(949)
-#endif //_WIN32
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Menu
 //
 
-IDC_TETRIS MENU DISCARDABLE 
+IDC_TETRIS MENU
 BEGIN
     POPUP "&File"
     BEGIN
-        MENUITEM "열기",                        ID_TRAYICON_SHOWWINDOW
-        MENUITEM "종료",                        IDM_EXIT
-        MENUITEM "DoTetris는...",               IDM_ABOUT
+        MENUITEM "열기",                          ID_TRAYICON_SHOWWINDOW
+        MENUITEM "종료",                          IDM_EXIT
+        MENUITEM "DoTetris는...",                IDM_ABOUT
     END
 END
 
 
-#ifndef _MAC
 /////////////////////////////////////////////////////////////////////////////
 //
 // Version
@@ -65,18 +62,18 @@ BEGIN
     BEGIN
         BLOCK "041204b0"
         BEGIN
-            VALUE "Comments", "DoTetris\0"
-            VALUE "CompanyName", "Lings Software\0"
-            VALUE "FileDescription", "Play DoTetris~!!\0"
-            VALUE "FileVersion", "1, 0, 0, 1\0"
-            VALUE "InternalName", "DoTetris\0"
-            VALUE "LegalCopyright", "Lings Software Copyright ⓒ 2010\0"
-            VALUE "LegalTrademarks", "DoTetris\0"
-            VALUE "OriginalFilename", "DoTetris.exe\0"
-            VALUE "PrivateBuild", "20100226\0"
-            VALUE "ProductName", "DoTetris\0"
-            VALUE "ProductVersion", "1, 0, 0, 1\0"
-            VALUE "SpecialBuild", "20100226\0"
+            VALUE "Comments", "Tetris"
+            VALUE "CompanyName", "LingsGames"
+            VALUE "FileDescription", "Play DoTetris~!!"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "DoTetris"
+            VALUE "LegalCopyright", "LingsGames Copyright ⓒ 2010"
+            VALUE "LegalTrademarks", "Tetris"
+            VALUE "OriginalFilename", "Tetris.exe"
+            VALUE "PrivateBuild", "20100226"
+            VALUE "ProductName", "Tetris"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+            VALUE "SpecialBuild", "20100226"
         END
     END
     BLOCK "VarFileInfo"
@@ -84,8 +81,6 @@ BEGIN
         VALUE "Translation", 0x412, 1200
     END
 END
-
-#endif    // !_MAC
 
 
 /////////////////////////////////////////////////////////////////////////////
@@ -95,25 +90,26 @@ END
 
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
-IDI_TETRIS              ICON    DISCARDABLE     "res\\DoTet.ico"
-IDI_SMALL               ICON    DISCARDABLE     "res\\DoTetSm.ico"
+IDI_TETRIS              ICON                    "res\\DoTet.ico"
+
+IDI_SMALL               ICON                    "res\\DoTetSm.ico"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Dialog
 //
 
-IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 234, 79
-STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_ABOUTBOX DIALOGEX 0, 0, 234, 79
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "DoTetris 프로그램 정보"
-FONT 9, "굴림"
+FONT 9, "굴림", 0, 0, 0x0
 BEGIN
     DEFPUSHBUTTON   "확인",IDOK,174,6,50,14
     ICON            IDI_TETRIS,IDC_STATIC,12,15,20,20
-    LTEXT           "DoTetris Version 1.0",IDC_STATIC,37,7,125,9,SS_NOPREFIX
-    LTEXT           "Copyright (C) 2010 Lings Software",IDC_STATIC,37,22,131,
-                    9
-    LTEXT           "Made By Jay && nakka",IDC_STATIC,37,38,179,9
+    LTEXT           "Tetris Version 1.0",IDC_STATIC,37,7,125,9,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2010 LingsGames",IDC_STATIC,37,22,131,9
+    LTEXT           "Made by nenji and minchan",IDC_STATIC,37,38,179,9
     LTEXT           "E-Mail : jjang010@hotmail.com",IDC_STATIC,37,54,182,9
 END
 
@@ -124,7 +120,7 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO DISCARDABLE 
+GUIDELINES DESIGNINFO
 BEGIN
     IDD_ABOUTBOX, DIALOG
     BEGIN
@@ -136,47 +132,32 @@ BEGIN
 END
 #endif    // APSTUDIO_INVOKED
 
-#endif    // Korean resources
+#endif    // Korean (Korea) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////////////////////////
-// English (U.S.) resources
+// English (United States) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-#ifdef _WIN32
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
-#endif //_WIN32
-
-/////////////////////////////////////////////////////////////////////////////
-//
-// Accelerator
-//
-
-IDC_TETRIS ACCELERATORS MOVEABLE PURE 
-BEGIN
-    "?",            IDM_ABOUT,              ASCII,  ALT
-    "/",            IDM_ABOUT,              ASCII,  ALT
-END
-
 
 /////////////////////////////////////////////////////////////////////////////
 //
 // Dialog
 //
 
-IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 220, 74
-STYLE DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+IDD_ABOUTBOX DIALOGEX 0, 0, 275, 74
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "DoTetris About Program Info"
-FONT 8, "MS Shell Dlg"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
-    ICON            IDI_TETRIS,IDC_STATIC,14,14,20,20
+    ICON            IDI_TETRIS,IDC_STATIC,14,14,21,20
     LTEXT           "DoTetris Version 1.0",IDC_STATIC,43,7,83,8,SS_NOPREFIX
-    LTEXT           "Copyright (C) 2010 Lings Software",IDC_STATIC,43,20,114,
-                    8
-    DEFPUSHBUTTON   "O   K",IDOK,159,6,52,13,WS_GROUP
-    LTEXT           "Made By Jay && nakka",IDC_STATIC,43,35,86,8
+    LTEXT           "Copyright (C) 2010 LingsGames",IDC_STATIC,43,20,114,8
+    DEFPUSHBUTTON   "O   K",IDOK,216,7,52,13,WS_GROUP
+    LTEXT           "Made by nenji and minchan",IDC_STATIC,43,35,86,8
     LTEXT           "E-Mail : jjang010@hotmail.com",IDC_STATIC,43,50,107,8
 END
 
@@ -187,17 +168,29 @@ END
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO MOVEABLE PURE 
+GUIDELINES DESIGNINFO
 BEGIN
     IDD_ABOUTBOX, DIALOG
     BEGIN
         LEFTMARGIN, 7
-        RIGHTMARGIN, 213
+        RIGHTMARGIN, 268
         TOPMARGIN, 7
         BOTTOMMARGIN, 67
     END
 END
 #endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_TETRIS ACCELERATORS
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
 
 
 #ifdef APSTUDIO_INVOKED
@@ -206,12 +199,12 @@ END
 // TEXTINCLUDE
 //
 
-1 TEXTINCLUDE MOVEABLE PURE 
+1 TEXTINCLUDE 
 BEGIN
     "resource.h\0"
 END
 
-2 TEXTINCLUDE MOVEABLE PURE 
+2 TEXTINCLUDE 
 BEGIN
     "#ifndef APSTUDIO_INVOKED\r\n"
     "#include ""targetver.h""\r\n"
@@ -222,7 +215,7 @@ BEGIN
     "\0"
 END
 
-3 TEXTINCLUDE MOVEABLE PURE 
+3 TEXTINCLUDE 
 BEGIN
     "\r\n"
     "\0"
@@ -236,13 +229,13 @@ END
 // String Table
 //
 
-STRINGTABLE DISCARDABLE 
+STRINGTABLE
 BEGIN
     IDS_APP_TITLE           "DoTetris"
     IDC_TETRIS              "DOTETRIS"
 END
 
-#endif    // English (U.S.) resources
+#endif    // English (United States) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
