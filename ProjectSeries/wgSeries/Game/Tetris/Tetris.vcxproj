@@ -123,6 +123,7 @@
   <ItemGroup>
     <ClCompile Include="CompoundBlock.cpp" />
     <ClCompile Include="Fsound.cpp" />
+    <ClCompile Include="SceneMgr.cpp" />
     <ClCompile Include="Stage.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug Release Static|Win32'">Create</PrecompiledHeader>
@@ -131,6 +132,7 @@
     <ClCompile Include="Tetris.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="SceneMgr.h" />
     <ClInclude Include="CompoundBlock.h" />
     <ClInclude Include="Fsound.h" />
     <ClInclude Include="Resource.h" />

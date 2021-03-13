@@ -35,7 +35,7 @@ BEGIN
     BEGIN
         MENUITEM "열기",                          ID_TRAYICON_SHOWWINDOW
         MENUITEM "종료",                          IDM_EXIT
-        MENUITEM "DoTetris는...",                IDM_ABOUT
+        MENUITEM "Tetris는...",                  IDM_ABOUT
     END
 END
 
@@ -66,7 +66,7 @@ BEGIN
             VALUE "CompanyName", "LingsGames"
             VALUE "FileDescription", "Play DoTetris~!!"
             VALUE "FileVersion", "1, 0, 0, 1"
-            VALUE "InternalName", "DoTetris"
+            VALUE "InternalName", "Tetris"
             VALUE "LegalCopyright", "LingsGames Copyright ⓒ 2010"
             VALUE "LegalTrademarks", "Tetris"
             VALUE "OriginalFilename", "Tetris.exe"
@@ -102,7 +102,7 @@ IDI_SMALL               ICON                    "res\\DoTetSm.ico"
 
 IDD_ABOUTBOX DIALOGEX 0, 0, 234, 79
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "DoTetris 프로그램 정보"
+CAPTION "Tetris 프로그램 정보"
 FONT 9, "굴림", 0, 0, 0x0
 BEGIN
     DEFPUSHBUTTON   "확인",IDOK,174,6,50,14
@@ -150,11 +150,11 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 
 IDD_ABOUTBOX DIALOGEX 0, 0, 275, 74
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "DoTetris About Program Info"
+CAPTION "Tetris About Program Info"
 FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
-    ICON            IDI_TETRIS,IDC_STATIC,14,14,21,20
-    LTEXT           "DoTetris Version 1.0",IDC_STATIC,43,7,83,8,SS_NOPREFIX
+    ICON            IDI_TETRIS,IDC_STATIC,14,14,20,20
+    LTEXT           "Tetris Version 1.0",IDC_STATIC,43,7,83,8,SS_NOPREFIX
     LTEXT           "Copyright (C) 2010 LingsGames",IDC_STATIC,43,20,114,8
     DEFPUSHBUTTON   "O   K",IDOK,216,7,52,13,WS_GROUP
     LTEXT           "Made by nenji and minchan",IDC_STATIC,43,35,86,8
@@ -231,8 +231,8 @@ END
 
 STRINGTABLE
 BEGIN
-    IDS_APP_TITLE           "DoTetris"
-    IDC_TETRIS              "DOTETRIS"
+    IDS_APP_TITLE           "Tetris"
+    IDC_TETRIS              "TETRIS"
 END
 
 #endif    // English (United States) resources

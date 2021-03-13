@@ -1,39 +1,7 @@
 // Tetris.cpp : Defines the entry point for the application.
 //
-
 #include "stdafx.h"
-#include "winbase.h"
-
 #include "Tetris.h"
-#include "../libSimpleSkin/SkinFileReader.h"
-#include "Stage.h"
-
-//#define		NUM_ICON_FOR_ANIMATION	1
-#define		MAX_LOADSTRING			100
-#define		MYMSG_NOTIFYICON		(WM_APP + 100)
-#define		STAGE_WIDTH_SINGLE		480		//(458)				//Solo 458, Net 800
-#define		STAGE_HEIGHT_SINGLE		550		//(473)
-#define		STAGE_WIDTH_MULTI		800		//(458)				//Solo 458, Net 800
-#define		STAGE_HEIGHT_MULTI		550		//(473)
-#define		ADSENCE_WIDTH			480
-#define		ADSENSE_HEIGHT			60
-
-// Global Variables:
-HINSTANCE hInst;								// current instance
-TCHAR szTitle[MAX_LOADSTRING];					// The title bar text
-TCHAR szWindowClass[MAX_LOADSTRING];			// the main window class name
-HWND hMainWnd = NULL;
-TCHAR szProgName[MAX_PATH];						// Mutex Name
-Stage stage;
-HICON hIcon;									// TrayIcon
-NOTIFYICONDATA IconData;
-
-// Foward declarations of functions included in this code module:
-ATOM				MyRegisterClass(HINSTANCE hInstance);
-BOOL				InitInstance(HINSTANCE, int);
-LRESULT CALLBACK	WndProc(HWND, UINT, WPARAM, LPARAM);
-INT_PTR CALLBACK	About(HWND, UINT, WPARAM, LPARAM);
-LONG OnTrayNotification(HINSTANCE hInstance, HWND hWnd, WPARAM wParam, LPARAM lParam);
 
 int APIENTRY _tWinMain(HINSTANCE hInstance,
                      HINSTANCE hPrevInstance,
@@ -44,7 +12,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 	UNREFERENCED_PARAMETER(lpCmdLine);
 
  	// TODO: Place code here.
-	_tcscat(szProgName, _T("DoTetris"));
+	_tcscat(szProgName, _T("Tetris"));
 	CreateMutex(NULL, TRUE, szProgName);
 	if( GetLastError() == ERROR_ALREADY_EXISTS)
 		return 0;
@@ -167,7 +135,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 	IconData.cbSize = sizeof(NOTIFYICONDATA);
 	IconData.hIcon  = hIcon;
 	IconData.hWnd   = hMainWnd;
-	_stprintf(IconData.szTip, _T("DoTetris"));
+	_stprintf(IconData.szTip, _T("Tetris"));
 
 	IconData.uCallbackMessage = MYMSG_NOTIFYICON;
 	IconData.uFlags = NIF_MESSAGE | NIF_ICON | NIF_TIP;
