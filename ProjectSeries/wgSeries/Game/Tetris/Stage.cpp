@@ -290,14 +290,14 @@ void Stage::LineCheck()
 	if(nStageIncrement != 0)
 	{
 		m_dwStage += 1;
-		_stprintf(szText, _T("%d Stage Clear"), m_dwStage);
+		_stprintf_s(szText, _T("%d Stage Clear"), m_dwStage);
 	}
 	pStatic->SetText(LPCTSTR(szText));
 	pStatic->Invalidate();
 
 	memset(szText, NULL, sizeof(szText));
 	if(dwIncrement == 50)
-		_tcscpy(szText, _T("Great~~!!"));
+		_tcscpy_s(szText, _T("Great~~!!"));
 
 	pStatic = (CSkinStaticControl *)m_pSkinWindow->FindControl(_T("great"), NULL);
 	pStatic->SetText(LPCTSTR(szText));
@@ -308,7 +308,7 @@ void Stage::LineCheck()
 	if(bComChk)
 	{
 		m_nCombo++;
-		_stprintf(szText, _T("%d Combo"), m_nCombo);
+		_stprintf_s(szText, _T("%d Combo"), m_nCombo);
 	}
 	else
 		m_nCombo = 0;
@@ -435,12 +435,12 @@ void Stage::ClearAll()
 void Stage::UpdateScore()
 {
 	TCHAR szText[255];
-	_stprintf(szText, _T("%u"), m_dwScore);
+	_stprintf_s(szText, _T("%u"), m_dwScore);
 	CSkinStaticControl * pStatic = (CSkinStaticControl *)m_pSkinWindow->FindControl(_T("score"), NULL);
 	pStatic->SetText(szText);
 	pStatic->Invalidate();
 
-	_stprintf(szText, _T("%u"), m_dwLineCount);
+	_stprintf_s(szText, _T("%u"), m_dwLineCount);
 	pStatic = (CSkinStaticControl *)m_pSkinWindow->FindControl(_T("clearblock"), NULL);
 	pStatic->SetText(szText);
 	pStatic->Invalidate();

@@ -108,7 +108,7 @@
       <ModuleDependenciesFile>$(OutDir)</ModuleDependenciesFile>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>Msimg32.lib;%(AdditionalDependencies);fmod_vc.lib;libSimpleSkinWS.lib</AdditionalDependencies>
+      <AdditionalDependencies>Msimg32.lib;%(AdditionalDependencies);fmod_vc.lib;libSimpleSkin.lib</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>

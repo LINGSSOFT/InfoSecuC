@@ -7,9 +7,9 @@ void MakeUpper(STRING & str)
 	LPTSTR pszBuffer = (LPTSTR)str.c_str();
 
 #ifdef _UNICODE
-	_wcsupr(pszBuffer);
+	_wcsupr_s(pszBuffer, lstrlen(pszBuffer) + 1);
 #else
-	_strupr(pszBuffer);
+	_strupr_s(pszBuffer, lstrlen(pszBuffer) + 1);
 #endif
 }
 
@@ -18,8 +18,8 @@ void MakeLower(STRING & str)
 	LPTSTR pszBuffer = (LPTSTR)str.c_str();
 
 #ifdef _UNICODE
-	_wcslwr(pszBuffer);
+	_wcslwr_s(pszBuffer, lstrlen(pszBuffer) + 1);
 #else
-	_strlwr(pszBuffer);
+	_strlwr_s(pszBuffer, lstrlen(pszBuffer) + 1);
 #endif
 }

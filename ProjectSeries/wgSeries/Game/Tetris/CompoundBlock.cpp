@@ -75,7 +75,7 @@ CompoundBlock::CompoundBlock(int nBlockType)
 	GetModuleFileName(GetModuleHandle(NULL), szSkinFile, MAX_PATH);
 	_tcsrchr(szSkinFile, '\\')[0] = 0;
 	_tcsrchr(szSkinFile, '\\')[0] = 0;
-	_tcscat(szSkinFile, _T("\\DoTetris\\skin\\Block.bmp"));
+	_tcscat_s(szSkinFile, _T("\\DoTetris\\skin\\Block.bmp"));
 	CSkinImageMap * pImageMap = sg_pResourceMngr->QueryImageMap(szSkinFile);
 
 	int nBlockImage;

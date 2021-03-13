@@ -12,7 +12,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 	UNREFERENCED_PARAMETER(lpCmdLine);
 
  	// TODO: Place code here.
-	_tcscat(szProgName, _T("Tetris"));
+	_tcscat_s(szProgName, _T("Tetris"));
 	CreateMutex(NULL, TRUE, szProgName);
 	if( GetLastError() == ERROR_ALREADY_EXISTS)
 		return 0;
@@ -41,7 +41,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 	GetModuleFileName(GetModuleHandle(NULL), szSkinFile, MAX_PATH);
 	_tcsrchr(szSkinFile, '\\')[0] = 0;
 	_tcsrchr(szSkinFile, '\\')[0] = 0;
-	_tcscat(szSkinFile, _T("\\DoTetris\\skin\\StageSingle.xml"));
+	_tcscat_s(szSkinFile, _T("\\DoTetris\\skin\\StageSingle.xml"));
 
 	CSkinFileReader reader;
 	if(!reader.LoadSkin(szSkinFile, _T("default"), hMainWnd))
@@ -135,7 +135,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 	IconData.cbSize = sizeof(NOTIFYICONDATA);
 	IconData.hIcon  = hIcon;
 	IconData.hWnd   = hMainWnd;
-	_stprintf(IconData.szTip, _T("Tetris"));
+	_stprintf_s(IconData.szTip, _T("Tetris"));
 
 	IconData.uCallbackMessage = MYMSG_NOTIFYICON;
 	IconData.uFlags = NIF_MESSAGE | NIF_ICON | NIF_TIP;
@@ -220,26 +220,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	return 0;
 }
 
-// Message handler for about box.
-INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
-{
-	UNREFERENCED_PARAMETER(lParam);
-	switch (message)
-	{
-		case WM_INITDIALOG:
-			return (INT_PTR)TRUE;
-
-		case WM_COMMAND:
-			if (LOWORD(wParam) == IDOK || LOWORD(wParam) == IDCANCEL)
-			{
-				EndDialog(hDlg, LOWORD(wParam));
-				return (INT_PTR)TRUE;
-			}
-			break;
-	}
-	return (INT_PTR)FALSE;
-}
-
 /*	Function Name   : OnTrayNotification
 	Description		: CALLBACK routine which will be get executed when a notification is identified on the
 					  system tray. 
@@ -269,4 +249,24 @@ LONG OnTrayNotification(HINSTANCE hInstance, HWND hWnd, WPARAM wParam, LPARAM lP
 		}
 	}
 	return 0;
+}
+
+// Message handler for about box.
+INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
+{
+	UNREFERENCED_PARAMETER(lParam);
+	switch (message)
+	{
+	case WM_INITDIALOG:
+		return (INT_PTR)TRUE;
+
+	case WM_COMMAND:
+		if (LOWORD(wParam) == IDOK || LOWORD(wParam) == IDCANCEL)
+		{
+			EndDialog(hDlg, LOWORD(wParam));
+			return (INT_PTR)TRUE;
+		}
+		break;
+	}
+	return (INT_PTR)FALSE;
 }
