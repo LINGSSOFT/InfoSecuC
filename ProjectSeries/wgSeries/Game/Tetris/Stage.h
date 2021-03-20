@@ -11,7 +11,7 @@ public:
 	~Stage(void);
 
 	void StartGame(CSkinWindow * pSkinWindow);
-	void RelayMessage(UINT uMessage, WPARAM wParam, LPARAM lParam);
+	void RelayMessage(HWND hWnd, UINT uMessage, WPARAM wParam, LPARAM lParam);
 	void TogglePause();
 
 protected:
@@ -29,6 +29,8 @@ protected:
 	void UpdateScore();
 	void CreateNextBlock();
 	void StageClear();
+	void NotifyMessage(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+	void OnMouseEnter();
 
 	CSkinWindow * m_pSkinWindow;
 	CompoundBlock * m_pCurrentBlock;

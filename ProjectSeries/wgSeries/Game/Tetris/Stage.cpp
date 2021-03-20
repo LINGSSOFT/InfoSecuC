@@ -40,7 +40,7 @@ void Stage::StartGame(CSkinWindow * pSkinWindow)
 	m_bGameOver = TRUE;
 }
 
-void Stage::RelayMessage(UINT uMessage, WPARAM wParam, LPARAM lParam)
+void Stage::RelayMessage(HWND hWnd, UINT uMessage, WPARAM wParam, LPARAM lParam)
 {
 	switch(uMessage)
 	{
@@ -487,3 +487,22 @@ void Stage::CreateNextBlock()
 	pParent->Invalidate();
 }
 
+void Stage::NotifyMessage(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
+{
+	if (!m_bGameOver)
+	{
+		if (m_bPaused == FALSE)
+			TogglePause();
+	}
+
+}
+
+void Stage::OnMouseEnter()
+{
+	if (!m_bGameOver)
+	{
+		if (m_bPaused == FALSE)
+			TogglePause();
+	}
+
+}

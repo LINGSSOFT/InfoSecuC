@@ -31,7 +31,11 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 		return FALSE;
 	}
 
-	RECT rtWindow = {0, 0, STAGE_WIDTH_SINGLE, STAGE_HEIGHT_SINGLE};
+	if(bAdsence)	// 처음 유료 사용자를 위한 부분(사용 안할듯하나 일단 놔둠
+		rtWindow = {0, 0, STAGE_WIDTH_SINGLE, STAGE_HEIGHT_SINGLE + STAGE_SFIGHT_AREA + ADSENSE_HEIGHT_SINGLE};
+	else
+		rtWindow = { 0, 0, STAGE_WIDTH_SINGLE, STAGE_HEIGHT_SINGLE };
+
 	AdjustWindowRectEx(&rtWindow, GetWindowLong(hMainWnd, GWL_STYLE), TRUE, GetWindowLong(hMainWnd, GWL_EXSTYLE));
 	SetWindowPos(hMainWnd, NULL, 0, 0, rtWindow.right - rtWindow.left, rtWindow.bottom - rtWindow.top, SWP_NOZORDER | SWP_NOMOVE);
 
@@ -158,7 +162,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-	stage.RelayMessage(message, wParam, lParam);
+	stage.RelayMessage(hWnd, message, wParam, lParam);
 
 	int wmId, wmEvent;
 	PAINTSTRUCT ps;
@@ -172,9 +176,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 			// Parse the menu selections:
 			switch (wmId)
 			{
-				case WM_LBUTTONDBLCLK:
-					ShowWindow(hWnd, SW_SHOW);
-					break;
 				case IDM_ABOUT:
 					DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
 					break;
@@ -196,12 +197,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		case MYMSG_NOTIFYICON:
 			// System Tray Icon notification will be executed..
 			OnTrayNotification(hInst, hWnd, wParam, lParam);
-			switch(lParam)
-			{
-				case WM_LBUTTONDBLCLK:
-					ShowWindow(hWnd, SW_SHOW);
-					break;
-			}
 			break;
 		case WM_CLOSE:
 			stage.FrameClose();
@@ -232,7 +227,6 @@ LONG OnTrayNotification(HINSTANCE hInstance, HWND hWnd, WPARAM wParam, LPARAM lP
 	switch(lParam)
 	{
 		case WM_RBUTTONDOWN:
-		{
 			/** Load and verify the menu**/
 			if(hMenu = LoadMenu(hInstance, (LPCTSTR) MAKEINTRESOURCE(IDC_TETRIS)))
 			{
@@ -246,8 +240,13 @@ LONG OnTrayNotification(HINSTANCE hInstance, HWND hWnd, WPARAM wParam, LPARAM lP
 				}
 			}
 			break ;
-		}
+		case WM_LBUTTONDBLCLK:
+			ShowWindow(hWnd, SW_SHOW);
+			break;
+		default:
+			return FALSE;
 	}
+
 	return 0;
 }
 
