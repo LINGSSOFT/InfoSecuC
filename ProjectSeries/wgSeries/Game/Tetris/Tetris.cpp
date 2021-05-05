@@ -31,7 +31,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 		return FALSE;
 	}
 
-	if(bAdsence)	// Ã³À½ À¯·á »ç¿ëÀÚ¸¦ À§ÇÑ ºÎºÐ(»ç¿ë ¾ÈÇÒµíÇÏ³ª ÀÏ´Ü ³öµÒ
+	if(bAdsence)	// ì²˜ìŒ ìœ ë£Œ ì‚¬ìš©ìžë¥¼ ìœ„í•œ ë¶€ë¶„(ì‚¬ìš© ì•ˆí• ë“¯í•˜ë‚˜ ì¼ë‹¨ ë†”ë‘ 
 		rtWindow = {0, 0, STAGE_WIDTH_SINGLE, STAGE_HEIGHT_SINGLE + STAGE_SFIGHT_AREA + ADSENSE_HEIGHT_SINGLE};
 	else
 		rtWindow = { 0, 0, STAGE_WIDTH_SINGLE, STAGE_HEIGHT_SINGLE };
